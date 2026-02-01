@@ -1,3 +1,7 @@
+https://owasp.org/www-project-web-security-testing-guide/latest/6-Appendix/C-Fuzzing
+
+https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/
+
 `OWASP Top 10` — стандартный, широко признанный список 10 наиболее критических рисков безопасности веб-приложений, который составляется некоммерческой организацией OWASP (Open Web Application Security Project) на основе анализа реальных уязвимостей, инцидентов и обратной связи от специалистов;
 
 `Secure SDLC` — методология разработки ПО, которая встраивает практики безопасности на все этапы жизненного цикла (от идеи до поддержки), а не добавляет их в конце, чтобы выявлять и устранять уязвимости на самых ранних стациях, что снижает затраты и риски;
