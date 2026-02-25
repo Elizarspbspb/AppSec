@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пример страницы</title>
+</head>
+<body>
+  <h1>Заголовок страницы</h1>
+  <p>Текст и контент</p>
+	<div id="myDiv">
+	Привет, мир!
+	</div>
+	
+	<form>
+		<label>Имя (не менее 2 букв):</label>
+		<input
+			type="text"
+			name="username"
+			required
+			minlength="2"
+			placeholder="Иван"
+		  >
+
+		  <label>Email:</label>
+		  <input
+			type="email"
+			name="useremail"
+			required
+			placeholder="ivan@example.com"
+		  >
+
+		  <label>Возраст (18–99):</label>
+		  <input
+			type="number"
+			name="age"
+			required
+			min="18"
+			max="99"
+		  >
+
+		  <button type="submit">Зарегистрироваться</button>
+		</form>
+	
+</body>
+</html>

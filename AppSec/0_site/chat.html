@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Переписка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Чат</h2>
+  <div id="chat-box">
+    <p><strong>Admin:</strong> Добро пожаловать в чат!</p>
+  </div>
+
+  <form id="message-form" action="/send" method="post">
+    <input type="text" id="message" name="message" placeholder="Введите сообщение" required>
+    <button type="submit">Отправить</button>
+  </form>
+</body>
+</html>
