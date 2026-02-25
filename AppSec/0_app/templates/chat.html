@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Переписка</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
 
   <h2>Чат</h2>
   <div id="chat-box">
-    <p><strong>Admin:</strong> Добро пожаловать в чат!</p>
+    <!-- <p><strong>Admin:</strong> Добро пожаловать в чат!</p> -->
+    <!-- Здесь с помощью Jinja2-шаблонизатора отображаем все сообщения -->
+    {% for msg in messages %}
+      {{ msg | safe }}
+    {% endfor %}
   </div>
 
   <form id="message-form" action="/send" method="post">
