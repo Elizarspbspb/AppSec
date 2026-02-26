@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Регистрация</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>Регистрация — Безопасный пример</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self';">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+  <h1>Регистрация</h1>
 
-  <h2>Регистрация пользователя</h2>
-  <form action="/register" method="post">
-    <label for="username">Имя пользователя:</label><br>
-    <input type="text" id="username" name="username" required><br>
+  <!-- <form id="regForm" action="{{ url_for('register') }}" method="post" autocomplete="off" novalidate>-->
+  <form id="regForm" action="/register" method="post" autocomplete="off" novalidate>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br>
+    <label for="username">Имя пользователя</label><br>
+    <input id="username" name="username" required maxlength="30" pattern="[A-Za-z0-9_.-]{3,30}" title="3–30 символов (латиница, цифры, _ . -)"><br>
 
-    <label for="password">Пароль:</label><br>
-    <input type="password" id="password" name="password" required minlength="6"><br>
- 
-    <button type="submit">Зарегистрироваться</button>
-  </form>
+    <label for="email">Email</label><br>
+    <input id="email" name="email" type="email" required maxlength="254"><br>
+
+    <label for="password">Пароль</label><br>
+    <input id="password" name="password" type="password" required minlength="8" autocomplete="new-password"><br>
+
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+
+  <div id="welcome"></div>
+
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function(e) {
+      var username = document.getElementById('username').value || '';
+      if (username.length < 3) {
+        alert('Имя должно быть не меньше 3 символов');
+        e.preventDefault();
+        return;
+      }
+      // Безопасный вывод текста
+      document.getElementById('welcome').textContent = "Привет, " + username + "!";
+    });
+  </script>
 </body>
 </html>
