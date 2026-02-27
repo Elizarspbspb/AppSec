@@ -1,0 +1,14 @@
+{
+  "qwe": {
+    "email": "qwe@qwe",
+    "password": "scrypt:32768:8:1$9V632Vhut1nSZO6c$41d5d25c1431175ac7994f51aff8935c294fdbe65c4de40219a6a646747b3a5f8e87c8bb8de78cc9a9dd3ebe9c9ce7d701d523c721070e1902bf2cb5367be9f0"
+  },
+  "asd": {
+    "email": "asd@asd",
+    "password": "scrypt:32768:8:1$odlH5eS8qSkvD0cd$2b04f8f2323d76e5dd26d0c2e2952b33251f227874cf883774e43850c207b53504419172cd35fb9d37c8c23eb3a1cf9fcd069b8c8138a64ee9a01938ab418bd9"
+  },
+  "zxc": {
+    "email": "zxc@zxc",
+    "password": "scrypt:32768:8:1$anlBNcvwCsKTsbvz$291ee69b7044bbb21defd4c4f0781a2ebab90417ef3686dd639340251d2a342bfb2fac6dcaeea14f6761b467a11c1c0398962add0175032d10d17c729510fd63"
+  }
+}

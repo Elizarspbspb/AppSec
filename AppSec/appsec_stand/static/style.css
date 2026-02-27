@@ -28,6 +28,28 @@ body {
   background: linear-gradient(90deg, #343a92, #6c5ce7, #343a92);
 }
 
+.message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.textAdmin {
+  text-align: center;
+  color: #343a92; /* Глубокий фиолетовый */
+  padding: 25px 20px 15px;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 600;
+}
+
+.textUser {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 10px 15px;
+  max-width: 80%;
+}
+
 h2 {
   text-align: center;
   color: #343a92; /* Глубокий фиолетовый */

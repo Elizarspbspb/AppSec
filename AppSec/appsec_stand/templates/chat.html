@@ -9,11 +9,16 @@
  <div class="container">
   <h2>Чат поддержки</h2>
 	<div id="chat-box">
-		<!-- <p><strong>Admin:</strong> Добро пожаловать в чат!</p> -->
-		<!-- Здесь с помощью Jinja2-шаблонизатора отображаем все сообщения -->
-		{% for msg in messages %}
+		 <!--<p><strong>Admin:</strong> Добро пожаловать в чат!</p> -->
+		 <!--Здесь с помощью Jinja2-шаблонизатора отображаем все сообщения -->
+		<!-- {% for msg in messages %}
 		<div class="message {{ msg.type }}">
 			{{ msg | safe }}
+		</div>
+		{% endfor %}-->
+		{% for msg in messages %}
+		<div class="msg {% if msg.type == 'admin' %}textAdmin{% else %}textUser{% endif %}">
+			{{ msg.text | safe }}
 		</div>
 		{% endfor %}
   	</div>

@@ -9,7 +9,7 @@ app.secret_key = '6G6A906SBHP7@J0KX0'  #  — заменить
 DATA_FILE = os.path.join('data', 'users.json')
 
 def load_users():
-    if not os.path.exists(DATA_FILE):
+    if not os.path.exists(DATA_FILE) or os.path.getsize(DATA_FILE) == 0:
         return {}
     with open(DATA_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)
@@ -50,11 +50,20 @@ def login():
     if request.method == 'POST':
         username = request.form.get('username', '').strip()
         password = request.form.get('password', '')
+        if not username or not password:
+            flash('Заполните все поля', 'error')
+            return render_template('login.html')
         users = load_users()
         user = users.get(username)
+        print("user:", user)
+        print("check_password_hash(user['password']:", check_password_hash(user['password'], password))
+        print("password:", password)
         if user and check_password_hash(user['password'], password):
             session['username'] = username
             flash('Вы успешно вошли', 'success')
+            msgs = session.get('messages', [])
+            msgs.append({'text': f'<strong>Admin: </strong> Добро пожаловать в чат поддержки!', 'type': 'admin'})
+            session['messages'] = msgs
             return redirect(url_for('chat'))
         flash('Неверный логин или пароль', 'error')
         return render_template('login.html')
@@ -70,19 +79,21 @@ def logout():
 def chat():
     if 'username' not in session:
         return redirect(url_for('login'))
-    # На начальном этапе просто отображаем шаблон с чатом (пустым)
-    return render_template('chat.html', username=session['username'])
+    return render_template('chat.html', username=session['username'], messages=session.get('messages', []))
 
 @app.route('/send', methods=['POST'])
 def send():
     if 'username' not in session:
         return redirect(url_for('login'))
     message = request.form.get('message', '')
+    print("Message:", message)
     # Для демонстрации: просто передаем сообщение в шаблон; позже здесь будут показываться XSS и защита
     # В учебном стенде можно хранить сообщения в памяти или в файле
     # Простейший вариант — временно сохранить в сессии (не для продакшна)
     msgs = session.get('messages', [])
-    msgs.append({"user": session['username'], "text": message})
+    username = session['username']
+    #msgs.append({"user": session['username'], "text": message})
+    msgs.append({'text': f'<strong>{username}:</strong> {message}', 'type': 'user'})
     session['messages'] = msgs
     return redirect(url_for('chat'))
 

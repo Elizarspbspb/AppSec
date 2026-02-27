@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Вход в систему — Банковский чат</title>
-  <link rel="stylesheet" href="../static/style.css">
+  <meta charset="utf-8">
+  <title>Вход в систему</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="container">
@@ -44,6 +44,20 @@
     <div class="login-link">
       Нет аккаунта? <a href="/register">Зарегистрируйтесь</a>
     </div>
+	
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function(e) {
+      var username = document.getElementById('username').value || '';
+      if (username.length < 3) {
+        alert('Имя должно быть не меньше 3 символов');
+        e.preventDefault();
+        return;
+      }
+      // Безопасный вывод текста
+      document.getElementById('welcome').textContent = "Привет, " + username + "!";
+    });
+  </script>
+	
   </div>
 </body>
 </html>
