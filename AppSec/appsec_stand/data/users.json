@@ -10,5 +10,9 @@
   "zxc": {
     "email": "zxc@zxc",
     "password": "scrypt:32768:8:1$anlBNcvwCsKTsbvz$291ee69b7044bbb21defd4c4f0781a2ebab90417ef3686dd639340251d2a342bfb2fac6dcaeea14f6761b467a11c1c0398962add0175032d10d17c729510fd63"
+  },
+  "elizar": {
+    "email": "elizar@app.sec",
+    "password": "scrypt:32768:8:1$MfzSEE1e8qpz3tve$de21ee0c24491a7e6b73567f98de2c4be9de096da4b82d67f9a23ef8e29b9766eca1844150420681bf5faa632024302ee17838d531f4cde4997270c90e6a9ebd"
   }
 }
