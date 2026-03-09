@@ -128,17 +128,22 @@ layer VARCHAR(50) NOT NULL
 ''')
         
 for vuln in security_vulnerabilities:
-    print("Сканируем:", vuln)
+    #print("Сканируем:", vuln)
     numbers_int = [int(s) for s in re.findall(r'\d+', vuln[0])] # только целые
-    print("numbers_int:", numbers_int[0])
-    print("vuln[0]:", vuln[0])
-    print("vuln[1]:", vuln[1])
     title = vuln[1]
     # Добавляем данные
-    cursor.execute('INSERT INTO security_vulnerabilities (id, title, cwe_id, type, component, path, security_label, date, level, flag_find, flag_fix, layer) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (numbers_int[0], vuln[1], vuln[2], vuln[3], vuln[4], vuln[5], vuln[6], vuln[7], vuln[8], vuln[9], vuln[10], vuln[11]))
-    #cursor.execute('INSERT INTO security_vulnerabilities (id) VALUES (?)', (numbers_int[0]))
+    #cursor.execute('INSERT INTO security_vulnerabilities (id, title, cwe_id, type, component, path, security_label, date, level, flag_find, flag_fix, layer) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (numbers_int[0], vuln[1], vuln[2], vuln[3], vuln[4], vuln[5], vuln[6], vuln[7], vuln[8], vuln[9], vuln[10], vuln[11]))
         
-
+    try:
+        cursor.execute('INSERT INTO security_vulnerabilities (id, title, cwe_id, type, component, path, security_label, date, level, flag_find, flag_fix, layer) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (numbers_int[0], vuln[1], vuln[2], vuln[3], vuln[4], vuln[5], vuln[6], vuln[7], vuln[8], vuln[9], vuln[10], vuln[11]))
+        print(f"Запись с ID {numbers_int[0]} успешно добавлена")
+    except sqlite3.IntegrityError as e:
+        if 'UNIQUE constraint failed' in str(e):
+            print(f"Запись с ID {numbers_int[0]} уже существует, пропускаем")
+        else:
+            print(f"Другая ошибка целостности данных: {e}")
+    except Exception as e:
+        print(f"Неожиданная ошибка при вставке записи с ID {numbers_int[0]}: {e}")
 
 # Сохраняем изменения
 connection.commit()
