@@ -112,7 +112,8 @@ cursor = connection.cursor()
 # Создаем таблицу security_vulnerabilities
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS security_vulnerabilities (
-id INTEGER PRIMARY KEY NOT NULL UNIQUE,
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+vuln_id INTEGER NOT NULL UNIQUE,
 title VARCHAR(200) NOT NULL,
 cwe_id VARCHAR(20) NOT NULL,
 type VARCHAR(200) NOT NULL,
@@ -131,11 +132,8 @@ for vuln in security_vulnerabilities:
     #print("Сканируем:", vuln)
     numbers_int = [int(s) for s in re.findall(r'\d+', vuln[0])] # только целые
     title = vuln[1]
-    # Добавляем данные
-    #cursor.execute('INSERT INTO security_vulnerabilities (id, title, cwe_id, type, component, path, security_label, date, level, flag_find, flag_fix, layer) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (numbers_int[0], vuln[1], vuln[2], vuln[3], vuln[4], vuln[5], vuln[6], vuln[7], vuln[8], vuln[9], vuln[10], vuln[11]))
-        
     try:
-        cursor.execute('INSERT INTO security_vulnerabilities (id, title, cwe_id, type, component, path, security_label, date, level, flag_find, flag_fix, layer) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (numbers_int[0], vuln[1], vuln[2], vuln[3], vuln[4], vuln[5], vuln[6], vuln[7], vuln[8], vuln[9], vuln[10], vuln[11]))
+        cursor.execute('INSERT INTO security_vulnerabilities (vuln_id, title, cwe_id, type, component, path, security_label, date, level, flag_find, flag_fix, layer) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (numbers_int[0], vuln[1], vuln[2], vuln[3], vuln[4], vuln[5], vuln[6], vuln[7], vuln[8], vuln[9], vuln[10], vuln[11]))
         print(f"Запись с ID {numbers_int[0]} успешно добавлена")
     except sqlite3.IntegrityError as e:
         if 'UNIQUE constraint failed' in str(e):
@@ -144,6 +142,38 @@ for vuln in security_vulnerabilities:
             print(f"Другая ошибка целостности данных: {e}")
     except Exception as e:
         print(f"Неожиданная ошибка при вставке записи с ID {numbers_int[0]}: {e}")
+
+# ORDER BY - возвращает записи в нужном порядке
+# Найти уязвимости в компонентах Admin Panel и Reports — удалить эти записи.
+cursor.execute("SELECT id FROM security_vulnerabilities WHERE component = 'Admin Panel' ORDER BY id") 
+admin_panel = cursor.fetchall()
+print(" Найдены записи admin_panel: ", admin_panel)
+print(" Всего записей admin_panel: ", len(admin_panel))
+cursor.execute("DELETE FROM security_vulnerabilities WHERE component = 'Admin Panel'")
+# Admin Panel = 10
+
+cursor.execute("SELECT id FROM security_vulnerabilities WHERE component = 'Reports' ORDER BY id") 
+reports = cursor.fetchall()
+print(" Найдены записи reports: ", reports)
+print(" Всего записей reports: ", len(reports))
+cursor.execute("DELETE FROM security_vulnerabilities WHERE component = 'Reports'")
+# Reports = 13
+
+#Найти уязвимости с типом SQL Injection, у которых **дата_обнаружения > '2023-12-30 14:00:00'— изменить область на db
+cursor.execute("SELECT id FROM security_vulnerabilities WHERE type = 'SQL Injection' AND date > '2023-12-30 14:00:00' ORDER BY id") 
+sql_inj = cursor.fetchall()
+print(" Найдены записи sql_inj: ", sql_inj)
+print(" Всего записей sql_inj: ", len(sql_inj))
+cursor.execute("UPDATE security_vulnerabilities SET layer = 'db' WHERE type = 'SQL Injection' AND date > '2023-12-30 14:00:00'") 
+# SQL Injection = 6
+
+# Найти уязвимости, если у них область обнаружения = 'frontend', — заменить область обнаружения на full.
+cursor.execute("SELECT id FROM security_vulnerabilities WHERE layer = 'frontend' ORDER BY id") 
+frontend = cursor.fetchall()
+print(" Найдены записи frontend: ", frontend)
+print(" Всего записей frontend: ", len(frontend))
+cursor.execute("UPDATE security_vulnerabilities SET layer = 'full' WHERE layer = 'frontend'") 
+# frontend = 10
 
 # Сохраняем изменения
 connection.commit()
