@@ -1,0 +1,3963 @@
+pattern =  a%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  b%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  c%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  d%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  e%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  f%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  g%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  h%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  i%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  j%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  k%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  l%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  m%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  n%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  o%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  p%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  q%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  r%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  s%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  t%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  u%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  v%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  w%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  x%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  y%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  z%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  A%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  B%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  C%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  D%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  E%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  F%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  G%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  H%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  I%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  J%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  K%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  L%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  M%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  N%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  O%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  P%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  Q%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  R%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  S%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  T%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  U%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  V%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  W%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  X%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  Y%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  Z%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  0%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  1%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  2%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  3%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  4%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  5%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  6%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  7%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  8%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  9%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  !%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  "%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  #%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  $%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  %%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Поиск - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="success">Вы успешно вошли</li>
+          
+        </ul>
+      
+    
+    
+<div class="search-container">
+  <div class="search-header">
+    <h2>Поисковая система.</h2>
+    <div class="user-info">
+      Вы вошли как: <strong>admin</strong>
+      <a href="/logout" class="btn btn-logout">Выйти</a>
+    </div>
+  </div>
+  
+  <div class="search-form">
+    <form method="GET" action="/search">
+      <div class="form-group">
+        <input type="text" name="q" placeholder="Введите поисковый запрос..." value="" required>
+        <button type="submit" class="btn btn-search">Найти</button>
+      </div>
+    </form>
+  </div>
+  
+  <div class="search-results">
+    
+      <div class="search-tips">
+        <h3>Советы для поиска:</h3>
+        <ul>
+          <li>Примеры</li>
+          <li>Проверьте правописание запроса</li>
+          <li>Попробуйте синонимы или родственные термины</li>
+          <li>Используйте кавычки для поиска точной фразы</li>
+        </ul>
+      </div>
+    
+  </div>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  &%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  '%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  (%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  )%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  *%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  +%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  ,%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  -%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  .%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  /%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  :%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  ;%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  <%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  =%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  >%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  ?%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  @%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  [%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  \%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  ]%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  ^%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  _%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  `%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  {%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  |%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  }%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
+pattern =  ~%
+3 -  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход - AppSec Stand</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    
+      
+        <ul class="flashes">
+          
+            <li class="error">Неверный логин или пароль</li>
+          
+        </ul>
+      
+    
+    
+<div class="auth-form">
+  <h2>Вход в систему только для администраторов. </h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+  <p class="auth-link">
+    Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+  </p>
+</div>
+
+  </div>
+</body>
+</html>
