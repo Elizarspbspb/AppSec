@@ -55,15 +55,17 @@ def login():
             return render_template('login.html')
         users = load_users()
         user = users.get(username)
-        print("user:", user)
-        print("check_password_hash(user['password']:", check_password_hash(user['password'], password))
-        print("password:", password)
         if user and check_password_hash(user['password'], password):
             session['username'] = username
             flash('Вы успешно вошли', 'success')
             msgs = session.get('messages', [])
             msgs.append({'text': f'<strong>Admin: </strong> Добро пожаловать в чат поддержки!', 'type': 'admin'})
             session['messages'] = msgs
+            
+            print("user:", user)
+            print("check_password_hash(user['password']:", check_password_hash(user['password'], password))
+            print("password:", password)
+        
             return redirect(url_for('chat'))
         flash('Неверный логин или пароль', 'error')
         return render_template('login.html')
@@ -81,15 +83,14 @@ def chat():
         return redirect(url_for('login'))
     return render_template('chat.html', username=session['username'], messages=session.get('messages', []))
 
+# Для демонстрации сохраненной XSS - <script>alert(1)</script>
 @app.route('/send', methods=['POST'])
 def send():
     if 'username' not in session:
         return redirect(url_for('login'))
     message = request.form.get('message', '')
     print("Message:", message)
-    # Для демонстрации: просто передаем сообщение в шаблон; позже здесь будут показываться XSS и защита
-    # В учебном стенде можно хранить сообщения в памяти или в файле
-    # Простейший вариант — временно сохранить в сессии (не для продакшна)
+    # сохранить сообщение в сессии (не для продакшна). В учебном стенде можно хранить сообщения в памяти или в файле
     msgs = session.get('messages', [])
     username = session['username']
     #msgs.append({"user": session['username'], "text": message})
@@ -97,5 +98,19 @@ def send():
     session['messages'] = msgs
     return redirect(url_for('chat'))
 
+# Для демонстрации отраженной XSS - <script>alert(1)</script>
+'''@app.route('/send', methods=['GET'])
+def send():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    message = request.args.get('message', '')
+    print("Message:", message)
+    msgs = session.get('messages', [])
+    username = session['username']
+    #msgs.append({"user": session['username'], "text": message})
+    msgs.append({'text': f'<strong>{username}:</strong> {message}', 'type': 'user'})
+    session['messages'] = msgs
+    return redirect(url_for('chat'))
+'''
 if __name__ == '__main__':
     app.run(debug=True)

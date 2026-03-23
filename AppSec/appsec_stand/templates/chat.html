@@ -23,10 +23,19 @@
 		{% endfor %}
   	</div>
 
+	<!-- Для демонстрации сохраненной XSS - <script>alert(1)</script> -->
   	<form id="message-form" action="/send" method="post">
     	<input type="text" id="message" name="message" placeholder="Введите сообщение" required>
     	<button type="submit">Отправить</button>
   	</form>
+	
+	
+	<!-- Для демонстрации отраженной XSS - <script>alert(1)</script> -->
+	<!--<form id="message-form" action="/send" method="get">
+    	<input type="text" id="message" name="message" placeholder="Введите сообщение" required>
+    	<button type="submit">Отправить</button>
+  	</form>
+	-->
  </div>
 </body>
 </html>
