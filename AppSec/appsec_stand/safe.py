@@ -150,7 +150,8 @@ def send():
     )
     print("Message 3 :", clean)
     '''
-    # сохранить сообщение в сессии (не для продакшна). В учебном стенде можно хранить сообщения в памяти или в файле
+    # сохранить сообщение в сессии. В учебном стенде можно хранить сообщения в памяти или в файле
+    msgs = []
     msgs = session.get('messages', [])
     username = session['username']
     #msgs.append({"user": session['username'], "text": message})
