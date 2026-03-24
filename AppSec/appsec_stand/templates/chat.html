@@ -8,6 +8,24 @@
 <body>
  <div class="container">
   <h2>Чат поддержки</h2>
+	
+	<!-- Блок для flash-сообщений -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            <div class="flash-message
+              {% if category == 'error' %}flash-error
+              {% elif category == 'success' %}flash-success
+              {% else %}flash-info
+              {% endif %}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+	
 	<div id="chat-box">
 		 <!--<p><strong>Admin:</strong> Добро пожаловать в чат!</p> -->
 		 <!--Здесь с помощью Jinja2-шаблонизатора отображаем все сообщения -->

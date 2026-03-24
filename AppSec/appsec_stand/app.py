@@ -6,6 +6,7 @@ import os
 import unicodedata                  # нормализует Unicode 
 from urllib.parse import unquote    # декодирует URL
 import bleach                       # Санитизация
+import re                           # Валидация
 
 app = Flask(__name__)
 app.secret_key = '6G6A906SBHP7@J0KX0'  #  — заменить 
@@ -106,9 +107,17 @@ def send():
     print("Message 2 :", clean)
     '''
     # декодирует Нормализация Санитизация
-    decoded = unquote(message)      # декодирует URL
+    '''decoded = unquote(message)      # декодирует URL
     normalized = unicodedata.normalize('NFC', decoded)  # нормализует Unicode
     clean = bleach.clean(normalized)  # Санитизация
+    print("Message 3 :", clean)
+    '''
+    # Валидация
+    if not re.match(r"^[a-zA-Z0-9\s]+$", message):
+        flash('Недопустимые символы (<,>,(,),:,;,.,, и т.д.)', 'error')
+        return redirect(url_for('chat'))
+        #return "Invalid input"
+    clean = message
     print("Message 3 :", clean)
     
     # сохранить сообщение в сессии (не для продакшна). В учебном стенде можно хранить сообщения в памяти или в файле
