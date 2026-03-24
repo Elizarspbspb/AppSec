@@ -3,7 +3,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import json
 import os
 
-import bleach   # Санитизация
+import unicodedata                  # нормализует Unicode 
+from urllib.parse import unquote    # декодирует URL
+import bleach                       # Санитизация
 
 app = Flask(__name__)
 app.secret_key = '6G6A906SBHP7@J0KX0'  #  — заменить 
@@ -91,15 +93,24 @@ def send():
         return redirect(url_for('login'))
     message = request.form.get('message', '')
     print("Message 1 :", message)
+    
+    # Санитизация
     '''clean = bleach.clean(
         message,
         #tags=["b", "i", "u"],
         attributes={},
         strip=True
-    )'''
-    #clean = bleach.clean(message)
-    clean = message
+    )
+    clean = bleach.clean(message)
+    #clean = message
     print("Message 2 :", clean)
+    '''
+    # декодирует Нормализация Санитизация
+    decoded = unquote(message)      # декодирует URL
+    normalized = unicodedata.normalize('NFC', decoded)  # нормализует Unicode
+    clean = bleach.clean(normalized)  # Санитизация
+    print("Message 3 :", clean)
+    
     # сохранить сообщение в сессии (не для продакшна). В учебном стенде можно хранить сообщения в памяти или в файле
     msgs = session.get('messages', [])
     username = session['username']
