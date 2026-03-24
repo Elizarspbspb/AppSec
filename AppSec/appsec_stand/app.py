@@ -3,6 +3,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import json
 import os
 
+import bleach   # Санитизация
+
 app = Flask(__name__)
 app.secret_key = '6G6A906SBHP7@J0KX0'  #  — заменить 
 
@@ -83,8 +85,31 @@ def chat():
         return redirect(url_for('login'))
     return render_template('chat.html', username=session['username'], messages=session.get('messages', []))
 
-# Для демонстрации сохраненной XSS - <script>alert(1)</script>
 @app.route('/send', methods=['POST'])
+def send():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    message = request.form.get('message', '')
+    print("Message 1 :", message)
+    '''clean = bleach.clean(
+        message,
+        #tags=["b", "i", "u"],
+        attributes={},
+        strip=True
+    )'''
+    #clean = bleach.clean(message)
+    clean = message
+    print("Message 2 :", clean)
+    # сохранить сообщение в сессии (не для продакшна). В учебном стенде можно хранить сообщения в памяти или в файле
+    msgs = session.get('messages', [])
+    username = session['username']
+    #msgs.append({"user": session['username'], "text": message})
+    msgs.append({'text': f'<strong>{username}:</strong> {clean}', 'type': 'user'})
+    session['messages'] = msgs
+    return redirect(url_for('chat'))
+    
+# Для демонстрации сохраненной XSS - <script>alert(1)</script>
+'''@app.route('/send', methods=['POST'])
 def send():
     if 'username' not in session:
         return redirect(url_for('login'))
@@ -97,7 +122,7 @@ def send():
     msgs.append({'text': f'<strong>{username}:</strong> {message}', 'type': 'user'})
     session['messages'] = msgs
     return redirect(url_for('chat'))
-
+'''
 # Для демонстрации отраженной XSS - <script>alert(1)</script>
 '''@app.route('/send', methods=['GET'])
 def send():
