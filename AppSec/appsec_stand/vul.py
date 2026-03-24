@@ -66,7 +66,10 @@ def login():
             session['username'] = username
             flash('Вы успешно вошли', 'success')
             msgs = session.get('messages', [])
-            msgs.append({'text': f'<strong>Admin: </strong> Добро пожаловать в чат поддержки!', 'type': 'admin'})
+            #msgs.append({'text': f'<strong>Admin: </strong> Добро пожаловать в чат поддержки!', 'type': 'admin'})
+            
+            # полезная нагрузка для выполнения уязвимости
+            msgs.append({'text': f'<strong>Admin: </strong> <script>alert(1)</script>', 'type': 'admin'})
             session['messages'] = msgs
             
             print("user:", user)
@@ -97,43 +100,6 @@ def send():
     message = request.form.get('message', '')
     print("Message 1 :", message)
     clean = message
-    # Санитизация
-    '''clean = bleach.clean(
-        message,
-        #tags=["b", "i", "u"],
-        attributes={},
-        strip=True
-    )
-    clean = bleach.clean(message)
-    #clean = message
-    print("Message 2 :", clean)
-    '''
-    # декодирует Нормализация Санитизация
-    '''decoded = unquote(message)      # декодирует URL
-    normalized = unicodedata.normalize('NFC', decoded)  # нормализует Unicode
-    clean = bleach.clean(normalized)  # Санитизация
-    print("Message 3 :", clean)
-    '''
-    # Валидация
-    '''if not re.match(r"^[a-zA-Z0-9\s]+$", message):
-        flash('Недопустимые символы (<,>,(,),:,;,.,, и т.д.)', 'error')
-        return redirect(url_for('chat'))
-        #return "Invalid input"
-    clean = message
-    print("Message 3 :", clean)
-    '''
-    # "Энкодинг    
-    '''clean = escape(message)  # Безопасное экранирование
-    print("Message 3 :", clean)
-    '''
-    # Белый список
-    '''white_list = ["b", "i", "a"]  # разрешённые HTML-теги
-    clean = bleach.clean(
-        message,
-        tags = white_list
-    )
-    print("Message 3 :", clean)
-    '''
     # сохранить сообщение в сессии (не для продакшна). В учебном стенде можно хранить сообщения в памяти или в файле
     msgs = session.get('messages', [])
     username = session['username']

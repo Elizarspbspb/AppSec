@@ -18,5 +18,9 @@
   "123": {
     "email": "123@123",
     "password": "scrypt:32768:8:1$kJN0HyKL70iw8Wtm$95633943b3617b5149f51d258f2a0f2551b2fdde2c9fbbd63969bc4b55259be6745e5df5b198cd52e0fd7e8340da836204bb422601882ba747e2dea1746465f1"
+  },
+  "<script>alert(1)</script>": {
+    "email": "<script>alert(1)</script>@asd",
+    "password": "scrypt:32768:8:1$SyHhr0NUunqZt5Sz$a6f45a3972f7e7a0c83015bdd94618a198f61b1411cc4af4695538fde30bec58434b1af88deca770f990da84b86d0ce90a3d8cfbc37046be04a1c4e9dc97cb11"
   }
 }

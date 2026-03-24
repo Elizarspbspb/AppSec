@@ -66,8 +66,24 @@ def login():
             session['username'] = username
             flash('Вы успешно вошли', 'success')
             msgs = session.get('messages', [])
-            msgs.append({'text': f'<strong>Admin: </strong> Добро пожаловать в чат поддержки!', 'type': 'admin'})
-            session['messages'] = msgs
+            #msgs.append({'text': f'<strong>Admin: </strong> Добро пожаловать в чат поддержки!', 'type': 'admin'})
+            
+            # полезная нагрузка для выполнения уязвимости
+            msgs.append({'text': f'<strong>Admin: </strong> <script>alert(1)</script>', 'type': 'admin'})
+            
+            # Обрабатываем последнее
+            last_message = msgs[-1]                             # берём последний элемент списка
+            raw_text = last_message['text']                     # извлекаем текст
+            print("raw_text:", raw_text)
+            decoded = unquote(raw_text)                         # декодирует URL
+            normalized = unicodedata.normalize('NFC', decoded)  # нормализует Unicode
+            clean = bleach.clean(normalized)                    # Санитизация
+            print("Message 3 :", clean)
+            # Обновляем сообщение в списке
+            last_message['text'] = clean
+            session['messages'] = last_message
+            
+            #session['messages'] = msgs
             
             print("user:", user)
             print("check_password_hash(user['password']:", check_password_hash(user['password'], password))
@@ -108,12 +124,12 @@ def send():
     #clean = message
     print("Message 2 :", clean)
     '''
-    # декодирует Нормализация Санитизация
-    '''decoded = unquote(message)      # декодирует URL
-    normalized = unicodedata.normalize('NFC', decoded)  # нормализует Unicode
-    clean = bleach.clean(normalized)  # Санитизация
+    # Декодирование, нормализация, санитизация
+    decoded = unquote(message)      # декодирует URL
+    normalized = unicodedata.normalize('NFC', decoded)  # нормализует unicode
+    clean = bleach.clean(normalized)  # санитизация
     print("Message 3 :", clean)
-    '''
+    
     # Валидация
     '''if not re.match(r"^[a-zA-Z0-9\s]+$", message):
         flash('Недопустимые символы (<,>,(,),:,;,.,, и т.д.)', 'error')
