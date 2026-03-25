@@ -46,7 +46,11 @@
     	<input type="text" id="message" name="message" placeholder="Введите сообщение" required>
     	<button type="submit">Отправить</button>
   	</form>
-	
+
+	<!-- Выход -->
+	<form action="/logout" method="post" class="auth-form">
+		<button type="submit" class="submit-btn">Выход</button>
+	</form>
 	
 	<!-- Для демонстрации отраженной XSS - <script>alert(1)</script> -->
 	<!--<form id="message-form" action="/send" method="get">

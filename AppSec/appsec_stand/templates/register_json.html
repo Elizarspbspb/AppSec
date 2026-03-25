@@ -27,7 +27,7 @@
       {% endif %}
     {% endwith %}
 
-  <form id="regForm" action="/register" method="post" autocomplete="off" novalidate class="auth-form">
+  <form id="regForm" action="/register_json" method="post" autocomplete="off" novalidate class="auth-form">
 	<input type="hidden" name="csrf_token" value="{{ csrf_token }}">
 
    <div class="form-group">
