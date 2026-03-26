@@ -27,23 +27,27 @@
     {% endwith %}
 	
 	<div id="chat-box">
-		 <!--<p><strong>Admin:</strong> Добро пожаловать в чат!</p> -->
-		 <!--Здесь с помощью Jinja2-шаблонизатора отображаем все сообщения -->
-		<!-- {% for msg in messages %}
-		<div class="message {{ msg.type }}">
-			{{ msg | safe }}
-		</div>
-		{% endfor %}-->
+		<!--
 		{% for msg in messages %}
 		<div class="msg {% if msg.type == 'admin' %}textAdmin{% else %}textUser{% endif %}">
 			{{ msg.text | safe }}
 		</div>
 		{% endfor %}
+		-->
+		
+		{% for msg in messages %}
+        <div class="message {{ msg.type }}">
+            <div class="message-content">{{ msg.text|safe }}</div>
+            <div class="timestamp">{{ msg.timestamp }}</div>
+        </div>
+        {% endfor %}
+		
   	</div>
 
 	<!-- Для демонстрации сохраненной XSS - <script>alert(1)</script> -->
   	<form id="message-form" action="/send" method="post">
-    	<input type="text" id="message" name="message" placeholder="Введите сообщение" required>
+		<input type="hidden" name="dialog_id" value="{{ dialog_id }}">    	
+		<input type="text" id="message" name="message" placeholder="Введите сообщение" required>
     	<button type="submit">Отправить</button>
   	</form>
 
@@ -51,13 +55,6 @@
 	<form action="/logout" method="post" class="auth-form">
 		<button type="submit" class="submit-btn">Выход</button>
 	</form>
-	
-	<!-- Для демонстрации отраженной XSS - <script>alert(1)</script> -->
-	<!--<form id="message-form" action="/send" method="get">
-    	<input type="text" id="message" name="message" placeholder="Введите сообщение" required>
-    	<button type="submit">Отправить</button>
-  	</form>
-	-->
  </div>
 </body>
 </html>

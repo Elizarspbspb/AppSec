@@ -28,11 +28,11 @@
     {% endwith %}
 
   <form id="regForm" action="/register" method="post" autocomplete="off" novalidate class="auth-form">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+	<input type="hidden" name="csrf_token" value="{{ csrf_token }}">
 
    <div class="form-group">
     <label for="username">Имя пользователя</label>
-    <input id="username" name="username" required maxlength="30" pattern="[A-Za-z0-9_.]{3,30}" title="3–30 символов (латиница, цифры, _ . -)"><br>
+    <input id="username" name="username" required maxlength="30" pattern="[A-Za-z0-9_.-]{3,30}" title="3–30 символов (латиница, цифры, _ . -)"><br>
    </div>
    
    <div class="form-group">
@@ -48,14 +48,24 @@
     <button type="submit" class="submit-btn">Зарегистрироваться</button>
   </form>
 
-  <div class="login-link">
+	<div class="login-link">
       Есть аккаунт? <a href="/login">Войдите</a>
     </div>
-  
+	
   <div id="welcome"></div>
 
-  <!-- Подключение внешнего JS -->
-  <script src="{{ url_for('static', filename='js/registration.js') }}"></script>
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function(e) {
+      var username = document.getElementById('username').value || '';
+      if (username.length < 3) {
+        alert('Имя должно быть не меньше 3 символов');
+        e.preventDefault();
+        return;
+      }
+      // Безопасный вывод текста
+      document.getElementById('welcome').textContent = "Привет, " + username + "!";
+    });
+  </script>
  </div>
 </body>
 </html>
