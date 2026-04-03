@@ -4,7 +4,8 @@ from urllib.parse import urljoin, urlparse, parse_qs
 import re
 import time
 
-BASE_URL = "http://62.173.140.174:36100"
+#BASE_URL = "http://62.173.140.174:36100" 
+BASE_URL = "http://62.173.140.174:36102"
 LOGIN_URL = BASE_URL
 USERNAME = "admin"
 PASSWORD = "admin"
