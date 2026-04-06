@@ -78,7 +78,7 @@ def get_password_by_password_hash(username):
     
 def create_user(username, email, password_hash):
     try:
-        conn = sqlite3.connect(DB_FILE)
+        conn = sqlite3.connect(DB_FILE, timeout=10)
         cursor = conn.cursor()
         cursor.execute('INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)',(username, email, password_hash))
         conn.commit()

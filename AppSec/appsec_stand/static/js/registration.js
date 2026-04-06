@@ -1,12 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+  function escapeHtml(unsafe) {
+    return unsafe
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+  
   var form = document.getElementById('regForm');
   var usernameInput = document.getElementById('username');
   var welcomeElement = document.getElementById('welcome');
   var emailInput = document.getElementById('email');
   var passInput = document.getElementById('password');
 
-  if (!form || !usernameInput || !welcomeElement || !emailInput) {
-    console.error('Один из элементов не найден: regForm, username, email, welcome');
+  if (!form || !usernameInput || !welcomeElement || !emailInput || !passInput) {
+    console.error('Один из элементов не найден: regForm, username, email, welcome, passInput');
     return;
   }
 
@@ -35,12 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Проверка длины пароля
     if (passw.length < 8) {
       alert('Пароль должен быть не меньше 8 символов');
-      usernameInput.focus();
+      passInput.focus();
       e.preventDefault();
       return;
     }
 
-    welcomeElement.textContent = "Привет, " + username + "!";
+	// Защита но вероятна DOM XSS атака
+     welcomeElement.textContent = "Привет, " + escapeHtml(username) + "!";
+	// welcomeElement.innerHTML = "Привет, " + escapeHtml(username) + "!";
+	// welcomeElement.innerHTML = "Привет, " + username + "!";
   });
 
   usernameInput.addEventListener('input', function() {

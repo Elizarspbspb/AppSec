@@ -5,6 +5,9 @@ from session_manager import create_session, get_session_data
 import json
 import os
 
+import secrets
+import time
+
 import unicodedata                  # нормализует Unicode 
 from urllib.parse import unquote    # декодирует URL
 import bleach                       # Санитизация
@@ -74,22 +77,43 @@ def chat():
     user = get_user_by_username(username)
     user_id = user[0]
 
+    # CSRF-token на сессию
+    if "csrf" not in session:
+        session["csrf"] = {
+            #"token": generate_random(), 
+            "token": secrets.randbelow(100),
+            "ts": time.time()
+        }
+    #csrf = session["csrf"]
+    csrf = session.get("csrf", {})
+    
     # Получаем диалог пользователя (создаётся, если нет)
     dialog_id = get_or_create_dialog(user_id)
     
     messages = get_dialog_messages(dialog_id)
-    return render_template('chat.html', username=username, messages=messages, dialog_id=dialog_id)
+    return render_template('chat.html', username=username, messages=messages, dialog_id=dialog_id, csrf=csrf)
                          
 @app.route('/send', methods=['POST'])
 def send():
     if 'username' not in session:
         return redirect(url_for('login'))
+        
+    # Проверка CSRF-token
+    #if session.get("csrf") != request.form.get("csrf_token"):
+    #    return "CSRF blocked", 403
+    # Проверка CSRF-token + time
+    csrf = session.get("csrf", {})
+    if csrf.get("token") != request.form.get("csrf_token"):
+        return "CSRF blocked", 403
+    if time.time() - csrf.get("ts", 0) > 3600:
+        return "CSRF expired", 403
+    
     #message = request.form.get('message', '').strip()
     message = request.form.get('message', '')
     print("Message 1 :", message)
     clean_message = message
 
-    # Декодирование, нормализация, санитизация
+    # Декодирование, нормализация, санитизация от атак XSS <script>alert(1)</script>
     decoded = unquote(message)      # декодирует URL
     normalized = unicodedata.normalize('NFC', decoded)  # нормализует unicode
     clean_message = bleach.clean(normalized)  # санитизация

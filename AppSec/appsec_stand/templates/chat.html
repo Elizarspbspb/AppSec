@@ -48,6 +48,7 @@
   	<form id="message-form" action="/send" method="post">
 		<input type="hidden" name="dialog_id" value="{{ dialog_id }}">    	
 		<input type="text" id="message" name="message" placeholder="Введите сообщение" required>
+		<input type="hidden" name="csrf_token" value="{{csrf}}">
     	<button type="submit">Отправить</button>
   	</form>
 
