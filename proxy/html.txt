@@ -1,0 +1,21 @@
+<div class="addr"><div>
+                <div class="dropdown" style="display: inline">
+                    <a href="#" id="dd-aa6b952711f4d5dfe5c4e9bc1b093e9e" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">182.253.151.8:8080</a>
+                    <ul class="dropdown-menu" aria-labelledby="dd-aa6b952711f4d5dfe5c4e9bc1b093e9e">
+                        <li><a class="copyButton" data-copytext="182.253.151.8:8080" href="#" onclick="return false;" data-port="8080"><i class="fa fa-files-o" aria-hidden="true"></i> <span class="pseudo">Скопировать в буфер</span></a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#dnsblModal" onclick="return false;" data-ip="182.253.151.8" data-port="8080" data-gate="182.253.151.8" data-iphash="70300785240808030DE2506E7CD729EA0C710EEC18FAAE07F93" data-types="HTTPS, SOCKS4/5" data-cc="id" data-geo="Индонезия, Западная Ява, Сукабуми" data-level="Высоко анонимный" data-hostname="182.253.151.8"><i class="fa fa-check-square-o" aria-hidden="true"></i> <span class="pseudo">Проверка / DNSBL</span></a></li>
+                    </ul>
+                </div>
+            <script>
+                    document.getElementById("dd-aa6b952711f4d5dfe5c4e9bc1b093e9e").innerHTML = "182.253.151.8:" + zbf+zm91+zlz1+zm91;
+                    var els = document.querySelectorAll("ul[aria-labelledby='dd-aa6b952711f4d5dfe5c4e9bc1b093e9e'] a");
+                    [].forEach.call(els, function(el)
+                    {
+                        el.setAttribute("data-port", zbf+zm91+zlz1+zm91);
+                        const currentValue = el.getAttribute('data-copytext') || '';
+                        if (currentValue !== "")
+                        {
+                            el.dataset.copytext = currentValue + zbf+zm91+zlz1+zm91;
+                        }
+                    });
+                </script></div></div>
