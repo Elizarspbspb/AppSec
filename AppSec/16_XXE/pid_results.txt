@@ -1,0 +1,24 @@
+Начало сканирования PID от 1 до 50
+PID: 1 | Имя процесса: Unknown
+PID: 2 | Имя процесса: Unknown
+PID: 3 | Имя процесса: Unknown
+PID: 4 | Имя процесса: Unknown
+PID: 5 | Имя процесса: Unknown
+PID: 6 | Имя процесса: Unknown
+PID: 7 | Имя процесса: Unknown
+PID: 8 | Имя процесса: Unknown
+PID: 9 | Имя процесса: Unknown
+PID: 10 | Имя процесса: Unknown
+PID: 11 | Имя процесса: Unknown
+PID: 12 | Имя процесса: Unknown
+PID: 13 | Имя процесса: Unknown
+PID: 14 | Имя процесса: Unknown
+PID: 15 | Имя процесса: Unknown
+PID: 16 | Имя процесса: Unknown
+PID: 17 | Имя процесса: Unknown
+PID: 18 | Имя процесса: Unknown
+PID: 19 | Имя процесса: Unknown
+PID: 20 | Имя процесса: Unknown
+PID: 21 | Имя процесса: Unknown
+PID: 22 | Имя процесса: Unknown
+PID: 23 | Имя процесса: Unknown

