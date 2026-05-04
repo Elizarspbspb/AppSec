@@ -1,1 +1,0 @@
-https://www.geeksforgeeks.org/devops/python-for-devops/

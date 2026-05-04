@@ -1,1 +1,0 @@
-https://www.geeksforgeeks.org/software-testing/security-testing/
