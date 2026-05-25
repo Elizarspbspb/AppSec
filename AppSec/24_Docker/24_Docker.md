@@ -299,4 +299,229 @@ docker pull nginx:latest
 |`docker rm <container>`|Удаляет остановленный контейнер|
 |`docker rmi <image>`|Удаляет локальный образ|
 
- 
+## Сборка проекта в docker
+### 1. Сначала важно понять структуру
+Обычно что-то вроде:
+```
+project/
+ ├── app.py (или main.py)
+ ├── routes/
+ ├── templates/ (HTML)
+ ├── static/
+ ├── requirements.txt
+ ├── database.db / или Postgres/MySQL
+```
+**Установка на Linux:**
+```
+sudo apt install docker.io
+```
+
+**Установка на Windows:**
+
+Скачать и установить `Docker Desktop` с https://www.docker.com/products/docker-desktop/
+
+Установи и при установке выбери:
+* Use WSL2 instead of Hyper-V (рекомендуется)
+
+Проверь, запущен ли `Docker Desktop` в PowerShell:
+```bash
+docker version
+```
+Если в разделе `Client` есть информация, а в `Server` ошибка — значит `Docker Engine` не работает. Также посмотри, есть ли значок `Docker` в трее Windows. Если нет, то запусти `Docker Desktop` вручную (1–2 минуты):
+```
+Пуск → Docker Desktop
+```
+
+Когда он полностью запустится, команда:
+```bash
+docker ps
+```
+должна вернуть список контейнеров (возможно пустой), а не ошибку.
+
+Если `Docker Desktop` пишет про `WSL`:
+```bash
+wsl --status
+```
+Также проверь:
+```
+wsl -l -v
+```
+Если команда wsl не найдена. Значит WSL не установлен. Тогда в PowerShell от администратора:
+```
+wsl --install
+```
+После установки потребуется перезагрузка.
+
+### 2. Dockerfile для Python веб-приложения
+Вот универсальный рабочий вариант:
+```dockerfile id="py-docker-1"
+FROM python:3.11
+WORKDIR /app
+
+# сначала зависимости (чтобы кешировалось)
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# копируем весь проект
+COPY . .
+
+# открываем порт (обычно Flask/FastAPI)
+EXPOSE 5000
+
+# запуск приложения
+CMD ["python", "app.py"]
+```
+### 3. requirements.txt (обязательно)
+Если его нет, то сделай `pip freeze` - выводит список всех установленных в текущем Python-окружении пакетов с точными версиями:
+```bash
+pip freeze > requirements.txt
+```
+Но есть нюанс. Если ты выполнишь `pip freeze` в своём основном окружении, туда могут попасть десятки лишних пакетов:
+```
+jupyter==1.1.1
+ipython==9.4.0
+numpy==2.3.1
+...
+```
+которые к веб-приложению вообще не относятся.
+
+Поэтому лучше работать в виртуальном окружении (`venv`) и делать `pip freeze` уже внутри него.
+
+Есть ещё удобный способ - `pipreqs`. В корне проекта выполнить:
+```
+pip install pipreqs
+```
+затем:
+```
+pipreqs .
+```
+Утилита просканирует `.py` файлы и попытается создать `requirements.txt` только из реально используемых зависимостей.
+
+### 4. ВАЖНЫЙ момент про запуск Python веб-сервера
+Если у тебя Flask / FastAPI — он НЕ должен слушать localhost.
+
+**неправильно:**
+```python
+app.run()
+```
+**правильно:**
+```python
+app.run(host="0.0.0.0", port=5000)
+```
+Иначе `Docker` контейнер будет недоступен извне.
+
+### 5. Сборка образа
+В папке проекта:
+```bash
+sudo docker build -t my-python-web .
+```
+
+### 6. Посмотреть все образы
+В Ubuntu выполни:
+```
+sudo docker images
+```
+
+### 7. Запуск контейнера
+```bash
+sudo docker run -p 8080:5000 my-python-web
+```
+* 5000 → порт внутри контейнера (Flask/Flask-like app)
+* 8080 → порт на твоём компьютере (Ubuntu)
+
+Итоговый сервер запущен на:
+```
+http://localhost:8080
+```
+
+### 8. База данных
+Тут есть 2 варианта
+
+#### Вариант A (простой): SQLite (файл .db)
+Если у тебя `database.db`: `Dockerfile` ничего менять не надо, НО важно:
+* файл должен копироваться внутрь контейнера
+* или быть в `volume` (лучше)
+
+#### Вариант B (правильный): отдельная база через Docker
+Например PostgreSQL. Тогда нужен **docker-compose**:
+```yaml id="compose-1"
+version: "3.8"
+services:
+  web:
+    build: .
+    ports:
+      - "8080:5000"
+    depends_on:
+      - db
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+```
+### 9. Посмотреть работающие контейнеры:
+```
+sudo docker ps
+```
+Посмотреть все (включая остановленные):
+```
+sudo docker ps -a
+```
+
+### 10. Удалить контейнер:
+```
+sudo docker rm <id>
+```
+
+### 11. Передать проект + Dockerfile (лучший способ)
+Передаёшь:
+```
+BankApp/
+├── Dockerfile
+├── requirements.txt
+├── app.py
+├── ...
+```
+Тогда другой человек делает:
+```
+docker build -t my-python-web .
+docker run -p 8080:5000 my-python-web
+```
+Это стандартный и предпочтительный способ.
+
+### 12. Передать готовый Docker-образ
+Посмотреть образ:
+```
+sudo docker images
+```
+Например:
+```
+REPOSITORY      TAG       IMAGE ID
+my-python-web   latest    09f35baf68e8
+```
+Сохранить образ в файл:
+```
+sudo docker save -o my-python-web.tar my-python-web
+```
+Получится файл:
+```
+my-python-web.tar
+```
+Его можно передать через флешку, архиватор, сеть и т.д.
+
+На другой машине:
+```
+sudo docker load -i my-python-web.tar
+```
+Проверка:
+```
+docker images
+```
+Запуск:
+```
+docker run -p 8080:5000 my-python-web
+```
