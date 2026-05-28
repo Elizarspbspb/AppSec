@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Docker Compose Lab – Web + DB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{--b:#e5e7eb;--m:#64748b;--bg:#f7f7fb;--ok:#16a34a;--bad:#b91c1c}
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg)}
+    .wrap{max-width:900px;margin:40px auto;padding:0 16px}
+    .card{background:#fff;border:1px solid var(--b);border-radius:14px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+    .head{padding:24px 24px 0}
+    .body{padding:0 24px 24px}
+    h1{margin:0 0 6px 0}
+    .note{color:var(--m);font-size:14px;margin:0 0 16px;line-height:1.5}
+    .error{margin-top:10px;font-size:13px;color:var(--bad)}
+    form{margin-top:16px}
+    .field-label{display:block;font-size:14px;margin:8px 0 4px}
+    input[type="text"],textarea{width:100%;padding:10px 12px;border:1px solid var(--b);border-radius:12px;font-size:14px;box-sizing:border-box}
+    textarea{min-height:80px;resize:vertical}
+    button{margin-top:12px;padding:10px 16px;border:0;border-radius:12px;background:#3b82f6;color:#fff;font-weight:600;cursor:pointer}
+    .notes{margin-top:20px}
+    .note-item{border:1px solid var(--b);border-radius:10px;padding:10px 12px;margin-bottom:10px;background:#f9fafb}
+    .note-title{font-weight:600;margin-bottom:4px}
+    .empty{font-size:14px;color:var(--m)}
+    .status-ok{color:var(--ok);font-size:13px;margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="head">
+        <h1>Web + DB (Docker Compose Lab)</h1>
+        <p class="note">
+          Это простой веб-сервис на Flask, который хранит заметки в базе данных PostgreSQL.
+          Ваша задача – запустить его вместе с БД через <strong>docker compose</strong>.
+        </p>
+        {% if not error %}
+          <div class="status-ok">Соединение с базой данных установлено успешно.</div>
+        {% endif %}
+        {% if error %}
+          <div class="error">Ошибка работы с базой данных: {{ error }}</div>
+        {% endif %}
+      </div>
+      <div class="body">
+        <form method="post" action="/add">
+          <label class="field-label" for="title">Заголовок</label>
+          <input id="title" name="title" type="text" placeholder="Новая заметка">
+          <label class="field-label" for="body">Текст</label>
+          <textarea id="body" name="body" placeholder="Текст заметки"></textarea>
+          <button type="submit">Добавить заметку</button>
+        </form>
+
+        <div class="notes">
+          <h3>Список заметок</h3>
+          {% if notes and notes|length > 0 %}
+            {% for note in notes %}
+              <div class="note-item">
+                <div class="note-title">#{{ note[0] }} — {{ note[1] }}</div>
+                <div>{{ note[2] }}</div>
+              </div>
+            {% endfor %}
+          {% else %}
+            <p class="empty">Заметок пока нет.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
