@@ -65,6 +65,7 @@ volumes:
 networks:
   labnet:
 ```
+Данные `mysql` не хранятся напрямую в /var/lib/mysql на вашем хосте — это путь внутри контейнера. На хосте данные находятся в Docker‑томе (`db_data`), который управляется Docker.
 
 Разберём важные части этого файла и заодно те директивы, которые чаще всего встречаются в `docker-compose` конфигурациях.
 
@@ -112,38 +113,114 @@ networks:
 ## Основные команды для перезапуска (в командной строке - docker-compose)
 ### 1. Простой перезапуск существующих контейнеров (без пересборки):
 ```bash
-docker compose up -d
+docker-compose up -d
 ```
 * `-d` — запуск в фоновом режиме;
 * если контейнеры уже есть, они перезапустятся;
 * если нет — создадутся из текущих образов.
 ### 2. Пересборка и перезапуск (если меняли Dockerfile или код):
 ```bash
-docker compose up -d --build
+docker-compose up -d --build
 ```
 * `--build` — принудительно пересобирает образы перед запуском.
+#### 2.1 Как проверить, что образ создан - посмотреть все локальные образы:
+```bash
+docker images
+```
+#### 2.2 Проверить образы для конкретного сервиса через Docker Compose (после up -d):
+```bash
+docker-compose images
+```
+Эта команда покажет образы, связанные с сервисами в вашем `docker-compose.yml`.
 ### 3. Жёсткая пересборка без кеша (если изменения не применяются):
 ```bash
-docker compose build --no-cache
-docker compose up -d
+docker-compose build --no-cache
+docker-compose up -d
 ```
 * `--no-cache` — игнорирует кеш сборки, собирает всё заново.
 ### 4. Обновление образов + пересборка + перезапуск:
 ```bash
-docker compose pull
-docker compose build
-docker compose up -d
+docker-compose pull
+docker-compose build
+docker-compose up -d
 ```
 * `pull` — скачивает свежие версии образов из реестра;
 * `build` — пересобирает локальные образы;
 * `up -d` — запускает контейнеры.
 ### 5. Перезапуск конкретного сервиса (если в docker-compose.yml их несколько):
 ```bash
-docker compose up -d --build <service-name>
+docker-compose up -d --build <service-name>
 ```
 Пример:
 ```bash
-docker compose up -d --build web
+docker-compose up -d --build web
+```
+### 6. Посмотреть логи (в реальном времени):
+```bash
+sudo docker-compose logs -f
+```
+* `-f` - в реальном времени
+### 7. Подключиться к контейнеру или сервису отдельно (виртуальная среда):
+```bash
+docker-compose exec <service-name> bash
+```
+Пример:
+```bash
+docker compose exec web bash
+```
+
+### 8. Как проверить, что данные сохранены
+Найдите папку вашей базы в контейнере:
+```bash
+sudo docker-compose exec db bash
+```
+Перейдите в `base/`:
+```bash
+cd /var/lib/postgresql/data/base
+```
+Посмотрите список папок (`ls -la`) и сопоставьте папку с базой
+
+Внутри контейнера подключитесь к `psql`:
+```bash
+psql -U labuser -d labdb
+```
+Выполните sql запрос:
+```sql
+SELECT oid, datname FROM pg_database;
+```
+ИЛИ
+```sql
+SELECT oid, datname FROM pg_database WHERE datname = 'labdb';
+```
+Результат покажет `OID` вашей базы (например, 16384). Это имя папки в `base/`.
+
+ИЛИ
+
+1. Подключитесь к базе данных
+```bash
+sudo docker-compose exec db psql -U labuser -d labdb
+```
+2. Выполните команды в psql
+
+**2.1 Список всех таблиц:**
+```sql
+\dt
+```  
+**2.2 Структура конкретной таблицы:**
+```sql
+\d имя_таблицы
+```
+**2.3 Первые 10 строк из таблицы:**
+```sql
+SELECT * FROM имя_таблицы LIMIT 10;
+```
+**2.4 Количество записей в таблице:**
+```sql
+SELECT COUNT(*) FROM имя_таблицы;
+```
+**2.5. Выход из psql:**
+```sql
+\q
 ```
 
 ## Полный цикл действий: от остановки до запуска
@@ -152,10 +229,22 @@ docker compose up -d --build web
 ```bash
 docker compose down
 ```
-***Важно: команда удалит тома по умолчанию. Чтобы сохранить тома (например, с данными БД), используйте:***
+Команда сохранила мою Базу Данных.  
+***Важно: команда НЕ удалит тома по умолчанию. Чтобы НЕ сохранять тома (например, с данными БД), используйте:***
 ```bash
 docker compose down --volumes
 ```
+Данные программы не хранятся напрямую на вашем хосте — это путь внутри контейнера. На хосте данные находятся в `Docker‑томе` (db_data), который управляется Docker.
+
+#### 1.1 Найдите расположение тома на хосте
+```bash
+sudo docker volume inspect db_data
+```
+В выводе будет поле `"Mountpoint"` — это реальный путь на хосте, например:
+```json
+"Mountpoint": "/var/lib/docker/volumes/db_data/_data"
+```
+
 ### 2. При необходимости — очистить неиспользуемые образы и кеш:
 ```bash
 docker image prune -f
