@@ -157,7 +157,7 @@ docker logs my-container
 docker stats my-container
 ```
 5. Работа с томами (volumes)
-
+Это не копирование, а общая папка между контейнером и хостом системы.  
 Создание тома:
 ```bash
 docker volume create my-data
@@ -166,6 +166,14 @@ docker volume create my-data
 ```bash
 docker run -v my-data:/data --name container-with-volume my-python-app
 ```
+ИЛИ СРАЗУ
+```bash
+sudo docker run -v $(pwd)/huggingface_cache:/root/.cache/huggingface log-ai-processor-my-1.0
+```
+Слева от `:` на хосте, а справа от `:` это внутри контейнера пути.
+* без `-v` файлы живут внутри контейнера (изолированно)
+* с `-v` файлы живут на хосте (общая папка)
+
 6. Работа с сетями
 
 Просмотр сетей:
@@ -296,6 +304,7 @@ docker pull nginx:latest
 |`docker logs <container>`|Выводит логи указанного контейнера|
 |`docker exec -it <container> sh`|Запускает интерактивную оболочку внутри работающего контейнера (например, sh или bash)|
 |`docker stop <container>`|Корректно останавливает работающий контейнер|
+|`docker start <container>`|Запускает остановаленный контейнер|
 |`docker rm <container>`|Удаляет остановленный контейнер|
 |`docker rmi <image>`|Удаляет локальный образ|
 
@@ -416,6 +425,19 @@ app.run(host="0.0.0.0", port=5000)
 ```bash
 sudo docker build -t my-python-web .
 ```
+нужно когда:
+* изменил Python код ВНУТРИ образа
+* изменил Dockerfile
+* добавил зависимости
+
+Чтобы НЕ пересобирать образ каждый раз при изменении кода сделать так при запуске контейнера:
+```bash
+-v $(pwd)/scripts:/app/scripts
+```
+тогда:
+* код на хосте
+* контейнер просто исполняет его
+* изменения сразу видны
 
 ### 6. Посмотреть все образы
 В Ubuntu выполни:
@@ -423,7 +445,8 @@ sudo docker build -t my-python-web .
 sudo docker images
 ```
 
-### 7. Запуск контейнера
+### 7. Создание и запуск контейнера (СОЗДАНИЕ ПЕРВЫЙ РАЗ)
+Каждый раз создаёт новый контейнер
 ```bash
 sudo docker run -p 8080:5000 my-python-web
 ```
@@ -464,20 +487,33 @@ services:
       - "5432:5432"
 ```
 ### 9. Посмотреть работающие контейнеры:
-```
+```bash
 sudo docker ps
 ```
 Посмотреть все (включая остановленные):
-```
+```bash
 sudo docker ps -a
 ```
 
 ### 10. Удалить контейнер:
-```
+```bash
 sudo docker rm <id>
 ```
+### 11. Запустить старый контейнер
+```bash
+sudo docker start -ai log-analyzer
+```
+используется когда:
+* контейнер уже существует
+* он был Exited
+* ты хочешь продолжить  
+⚠️ НО: он запустит тот же самый код, который был внутри контейнера
 
-### 11. Передать проект + Dockerfile (лучший способ)
+Или сразу при запуске перейти к bash
+```bash
+docker exec -it my-container bash
+```
+### 12. Передать проект + Dockerfile (лучший способ)
 Передаёшь:
 ```
 BankApp/
@@ -493,7 +529,7 @@ docker run -p 8080:5000 my-python-web
 ```
 Это стандартный и предпочтительный способ.
 
-### 12. Передать готовый Docker-образ
+### 13. Передать готовый Docker-образ
 Посмотреть образ:
 ```
 sudo docker images
