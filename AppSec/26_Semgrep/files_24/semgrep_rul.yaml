@@ -1,0 +1,40 @@
+rules:
+  - id: py-dangerous-subprocess-shell
+    languages: [python]
+    message: "Dangerous subprocess call with shell=True (shell command)"
+    severity: ERROR
+    pattern: subprocess.run(..., shell=True)
+
+  - id: py-insecure-md5
+    languages: [python]
+    message: "Using hashlib.md5 to hash a password or important data"
+    severity: WARNING
+    pattern: hashlib.md5(...)
+
+  - id: py-insecure-yaml-load
+    languages: [python]
+    message: "Unsafe yaml.load call without secure Loader"
+    severity: ERROR
+    pattern: yaml.load(...)
+
+  - id: py-insecure-pickle-loads
+    languages: [python]
+    message: "Unsafe deserialization via pickle.loads"
+    severity: ERROR
+    pattern: pickle.loads(...)
+
+  - id: py-requests-no-verify
+    languages: [python]
+    message: "HTTP request with verify=False (TLS certificate verification disabled)"
+    severity: WARNING
+    pattern: requests.get(..., verify=False)
+
+  - id: py-sql-string-concat
+    languages: [python]
+    message: "The SQL query is assembled through string concatenation, SQL injection is possible."
+    severity: WARNING
+    pattern: |
+      $CUR = ...
+      $QUERY = ... + ...
+      ...
+      $CUR.execute($QUERY)
