@@ -1,0 +1,58 @@
+                   
+                   
+┌─────────────────┐
+│ 9 Code Findings │
+└─────────────────┘
+                         
+  [36m[22m[24m  app.py[0m
+    ❯❱ py-eval-wrapper-usage
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          The execute_expression call uses eval internally.
+                                                           
+           18┆ result = execute_expression(prepared)	- TP
+            ⋮┆----------------------------------------
+           20┆ result = execute_expression(expr)	- TP
+
+    ❯❱ py-command-wrapper-usage
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Calling run_command_template executes the system command.
+                                                                   
+           36┆ run_command_template(command)	- TP
+   
+    ❯❱ py-requests-no-verify
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          requests.get with verify=False disables the verification of the TLS certificate.
+                                                                                          
+           50┆ r = requests.get(target, verify=False) 		- TP
+
+		
+
+		55┆ app.run(debug=True)		- FN
+                
+
+                   
+  [36m[22m[24m  command_utils.py[0m
+    ❯❱ py-os-system
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Calling os.system is potentially dangerous (shell command).
+                                                                     
+            7┆ os.system(full)		- TP
+            ⋮┆----------------------------------------
+           14┆ os.system(command)	- FP
+                                  
+  [36m[22m[24m  config_utils.py[0m
+    ❯❱ py-yaml-load
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          yaml.load may be unsafe without a secure Loader.
+                                                          
+           15┆ data = yaml.load(text)		- TP
+                                    
+  [36m[22m[24m  dangerous_eval.py[0m
+   ❯❯❱ py-eval-usage
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Using eval may result in arbitrary code execution.
+                                                            
+            4┆ result = eval(stripped)		- TP
+            ⋮┆----------------------------------------
+           10┆ result = eval(expr)		- FP
+

@@ -1,0 +1,36 @@
+rules:
+  - id: py-eval-usage
+    languages: [python]
+    message: "Using eval may result in arbitrary code execution."
+    severity: ERROR
+    pattern: eval(...)
+
+  - id: py-eval-wrapper-usage
+    languages: [python]
+    message: "The execute_expression call uses eval internally."
+    severity: WARNING
+    pattern: execute_expression(...)
+
+  - id: py-os-system
+    languages: [python]
+    message: "Calling os.system is potentially dangerous (shell command)."
+    severity: WARNING
+    pattern: os.system(...)
+
+  - id: py-command-wrapper-usage
+    languages: [python]
+    message: "Calling run_command_template executes the system command."
+    severity: WARNING
+    pattern: run_command_template(...)
+
+  - id: py-yaml-load
+    languages: [python]
+    message: "yaml.load may be unsafe without a secure Loader."
+    severity: WARNING
+    pattern: yaml.load(...)
+
+  - id: py-requests-no-verify
+    languages: [python]
+    message: "requests.get with verify=False disables the verification of the TLS certificate."
+    severity: WARNING
+    pattern: requests.get(..., verify=False)

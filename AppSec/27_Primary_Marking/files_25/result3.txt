@@ -1,0 +1,96 @@
+                    
+                    
+┌──────────────────┐
+│ 14 Code Findings │
+└──────────────────┘
+                         
+  [36m[22m[24m  app.py[0m
+   ❯❯❱ semgrep-rules.python.django.security.injection.ssrf.ssrf-injection-requests
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Data from request object is passed to a new server-side request. This could lead to a server-side  
+          request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an        
+          allowlist, do not forward the response to the user, and ensure proper authentication and transport-
+          layer security in the proxied request. See https://owasp.org/www-                                  
+          community/attacks/Server_Side_Request_Forgery to learn more about SSRF vulnerabilities.            
+                                                                                                             
+           49┆ target = request.args.get("target", "https://example.com")
+           50┆ r = requests.get(target, verify=False)
+   
+   ❯❯❱ semgrep-rules.python.flask.security.injection.ssrf-requests
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Data from request object is passed to a new server-side request. This could lead to a server-side  
+          request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an        
+          allowlist, do not forward the response to the user, and ensure proper authentication and transport-
+          layer security in the proxied request.                                                             
+                                                                                                             
+           50┆ r = requests.get(target, verify=False)
+   
+    ❯❱ semgrep-rules.python.requests.best-practice.use-raise-for-status
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          There's an HTTP request made with requests, but the raise_for_status() utility method isn't used.   
+          This can result in request errors going unnoticed and your code behaving in unexpected ways, such as
+          if your authorization API returns a 500 error while you're only checking for a 401.                 
+                                                                                                              
+           50┆ r = requests.get(target, verify=False)
+   
+    ❯❱ semgrep-rules.python.requests.best-practice.use-timeout
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Detected a 'requests' call without a timeout set. By default, 'requests' calls wait until the  
+          connection is closed. This means a 'requests' call without a timeout will hang the program if a
+          response is never received. Consider setting a timeout for all 'requests'.                     
+                                                                                                         
+           ▶▶┆ Autofix ▶ requests.get(target, verify=False, timeout=30)
+           50┆ r = requests.get(target, verify=False)
+   
+   ❯❯❱ semgrep-rules.python.requests.security.disabled-cert-validation
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Certificate verification has been explicitly disabled. This permits insecure connections to insecure
+          servers. Re-enable certification validation.                                                        
+                                                                                                              
+           ▶▶┆ Autofix ▶ requests.get(target, verify=True)
+           50┆ r = requests.get(target, verify=False)
+   
+    ❯❱ semgrep-rules.python.flask.security.audit.debug-enabled
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will   
+          leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug'
+          using system environment variables.                                                                 
+                                                                                                              
+           55┆ app.run(debug=True)
+                                   
+  [36m[22m[24m  command_utils.py[0m
+   ❯❯❱ semgrep-rules.python.lang.security.audit.dangerous-system-call-audit
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Found dynamic content used in a system call. This is dangerous if external data can reach this    
+          function call because it allows a malicious actor to execute commands. Use the 'subprocess' module
+          instead, which is easier to use without accidentally exposing a command injection vulnerability.  
+                                                                                                            
+            7┆ os.system(full)
+                                    
+  [36m[22m[24m  dangerous_eval.py[0m
+    ❯❱ semgrep-rules.python.lang.security.audit.eval-detected
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this 
+          content can be input from outside the program, this may be a code injection vulnerability. Ensure
+          evaluated content is not definable by external sources.                                          
+                                                                                                           
+            4┆ result = eval(stripped)
+                                    
+  [36m[22m[24m  semgrep_rules.yml[0m
+     ❱ semgrep-rules.yaml.semgrep.metadata-category
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          This Semgrep rule is missing a valid 'category' field in the 'metadata'. 'category' must be one of
+          'security', 'correctness', 'best-practice', 'performance', 'maintainability', or 'portability'.   
+                                                                                                            
+            2┆ - id: py-eval-usage
+            ⋮┆----------------------------------------
+            8┆ - id: py-eval-wrapper-usage
+            ⋮┆----------------------------------------
+           14┆ - id: py-os-system
+            ⋮┆----------------------------------------
+           20┆ - id: py-command-wrapper-usage
+            ⋮┆----------------------------------------
+           26┆ - id: py-yaml-load
+            ⋮┆----------------------------------------
+           32┆ - id: py-requests-no-verify
+
