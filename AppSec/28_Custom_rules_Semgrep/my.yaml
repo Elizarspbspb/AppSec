@@ -1,0 +1,26 @@
+rules:
+  - id: one
+    languages: [python]
+    severity: WARNING
+    message: "query = \"SELECT id, username, email FROM users WHERE id = \" + user_id"
+    pattern: query = "SELECT id, username, email FROM users WHERE id = " + user_id
+   
+  - id: two
+    languages: [python]
+    severity: WARNING
+    message: "query = ..."
+    pattern: query = "$SELECT" + user_id
+    
+  - id: concatinathion
+    languages: [python]
+    severity: WARNING
+    message: "query = ..."
+    pattern: query = "$SELECT" + $ID
+    
+  - id: four
+    languages: [python]
+    severity: WARNING
+    message: "query = ..."
+    patterns:
+    - pattern: requests.get(...)
+    - pattern-inside: requests.get(..., verify=False, ...)
