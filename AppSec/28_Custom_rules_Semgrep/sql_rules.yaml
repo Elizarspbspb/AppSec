@@ -1,18 +1,5 @@
 # semgrep scan  --config=../my.yaml ./sql_app.py
 rules:
-  - id: one
-    languages: [python]
-    severity: WARNING
-    message: "query = \"SELECT id, username, email FROM users WHERE id = \" + user_id"
-    pattern: query = "SELECT id, username, email FROM users WHERE id = " + user_id
-   
-  - id: two
-    languages: [python]
-    severity: WARNING
-    message: "query = ..."
-    #pattern: query = "$SELECT" + user_id
-    pattern: query = $SQL + user_id
-    
   - id: unsafe_concatinathion_plus
     languages: [python]
     severity: WARNING
@@ -53,21 +40,3 @@ rules:
     patterns:
     - pattern: cur.execute($Q)
     - pattern-not: cur.execute($Q, $Q2)
-    
-  - id: safe_execute
-    languages: [python]
-    severity: WARNING
-    message: "flexible setup safe execute"
-    pattern-either:
-    - pattern: cur.execute($Q, ($Q2,))
-    - pattern: cur.execute($Q, ($Q2, $Q3))
-    #- pattern-not: cur.execute($Q, ($Q2, $Q3))
-    
-#  - id: unsafe_sql_and_execute
-#    languages: [python]
-#    severity: WARNING
-#    message: "flexible setup safe execute"   
-#    pattern: |
-#      def $FUNC(...):
-#        $Q = "SELECT ..." + ...
-#        cur.execute($Q, ($Q2))

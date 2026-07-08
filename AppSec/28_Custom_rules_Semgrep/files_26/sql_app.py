@@ -4,6 +4,8 @@ from typing import List, Tuple, Optional
 
 def get_connection() -> sqlite3.Connection:
     conn = sqlite3.connect("app.db")
+    message = "SELECT something" + text
+    message2 = f"Hello {username}"
     return conn
 
 
@@ -11,6 +13,7 @@ def unsafe_get_user_by_id(user_id: str) -> Optional[Tuple]:
     conn = get_connection()
     cur = conn.cursor()
     query = "SELECT id, username, email FROM users WHERE id = " + user_id
+
     cur.execute(query)
     row = cur.fetchone()
     conn.close()
