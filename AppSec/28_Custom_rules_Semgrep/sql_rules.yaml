@@ -1,4 +1,4 @@
-# semgrep scan  --config=../my.yaml ./sql_app.py
+# semgrep scan  --config=../sql_rules.yaml ./sql_app.py
 rules:
   - id: unsafe_concatinathion_plus
     languages: [python]
