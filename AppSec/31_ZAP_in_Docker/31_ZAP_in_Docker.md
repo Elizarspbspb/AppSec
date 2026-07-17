@@ -20,6 +20,31 @@
 ### `4. Масштабирование`
 При необходимости можно параллельно запустить несколько экземпляров `ZAP` в разных контейнерах: для разных стендов, разных проектов или разных частей одного приложения. Каждый контейнер работает независимо, со своим конфигом и своими целями.
 
+## Подготовка Ubuntu
+1. Проверяем наличие Docker:
+```
+docker --version
+```
+Если Docker не установлен:
+```
+sudo apt update
+sudo apt install -y docker.io docker-compose-plugin
+```
+Запускаем сервис:
+```
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+Добавляем текущего пользователя в группу Docker:
+```
+sudo usermod -aG docker $USER
+```
+После этого необходимо перелогиниться.
+
+Проверка:
+```
+docker run hello-world
+```
 ## Официальные Docker-образы ZAP
 Проект `OWASP ZAP` публикует несколько базовых образов. Все они выполняют одну и ту же функцию — запуск `ZAP` — но ориентированы на разные случаи.
 
@@ -29,33 +54,103 @@
 * для ночных запусков;
 * для учебных стендов, где важно предсказуемое поведение.
 
+Основной вариант:
+```
+docker pull owasp/zap2docker-stable
+```
+Проверяем:
+```
+docker images | grep zap
+```
+Результат:
+```
+owasp/zap2docker-stable
+```
 ### 2. `owasp/zap2docker-weekly`
 Еженедельные сборки. В них быстрее появляются новые правила сканирования и исправления, потому что они формируются по мере разработки. Такой образ используют, если важно иметь самые свежие проверки и вы готовы к тому, что отдельные изменения могут быть менее проверенными, чем в стабильном релизе.
 
+Для самых свежих правил:
+```
+docker pull owasp/zap2docker-weekly
+```
 ### 3. `owasp/zap2docker-bare`
 Минимальный образ. В нём нет дополнительных оболочек и вспомогательных скриптов, только сам `ZAP` и необходимый минимум. Он нужен, когда:
 * важен минимальный размер образа;
 * вы строите свою интеграцию поверх ZAP и вам не нужны стандартные обвязки.
 
+Минимальный образ:
+```
+docker pull owasp/zap2docker-bare
+```
 Для курса и типичных практик обычно достаточно `stable`. `weekly` и `bare` имеет смысл показывать как варианты для более продвинутых сценариев.
 
-## Пример запуска ZAP в контейнере и проброс конфигов
+## Пример запуска ZAP в контейнере 
+Проверяем, что контейнер запускается:
+```
+docker run --rm owasp/zap2docker-stable zap.sh -version
+```
+Пример вывода:
+```
+OWASP ZAP 2.16.1
+```
+
+## Подготовка рабочей директории
+Создаем структуру проекта:
+```
+mkdir -p ~/zap-security
+cd ~/zap-security
+```
+Создаем каталоги:
+```
+mkdir -p zap-data/{context,policies,scripts,dictionaries,reports}
+```
+Получаем:
+```
+zap-security/
+|
+└── zap-data/
+    |
+    ├── context/
+    ├── policies/
+    ├── scripts/
+    ├── dictionaries/
+    └── reports/
+```
+## Проброс конфигов и запуск ZAP образа
 Под «пробросом конфигов» обычно понимают монтирование папки с файлами настроек и местом для отчётов внутрь контейнера.
 
 Пример:
 ```
-docker run --rm -u zap -v $(pwd)/zap-data:/zap/wrk owasp/zap2docker-stable zap-baseline.py -t https://target.example -r report.html
+docker run --rm \
+-u zap \
+-v $(pwd)/zap-data:/zap/wrk \
+owasp/zap2docker-stable \
+zap-baseline.py \
+-t https://target.example \
+-r reports/report.html
 ```
 Разберём, что здесь происходит.
 * `docker run` — запуск контейнера.
 * `--rm` — после завершения работы контейнер будет автоматически удалён.
 * `-u zap` — процессы внутри контейнера запускаются от пользователя `zap`, а не от root.
 * `-v $(pwd)/zap-data:/zap/wrk` — монтирование каталога:
-    * слева — папка на хосте, например `./zap-data` в текущем проекте;
+    * слева (`$(pwd)/zap-data`) — папка на хосте, например `~/zap-security/zap-data` в текущем проекте;
     * справа — каталог внутри контейнера (`/zap/wrk`), где ZAP ожидает рабочие файлы.
     * `owasp/zap2docker-stable` — образ, из которого создаётся контейнер.
-    * `zap-baseline.py -t ... -r report.html` — команда, которая запускается внутри контейнера: в данном случае скрипт базового сканирования ZAP, цель (-t) и имя HTML-отчёта (-r).
+    * `zap-baseline.py -t ... -r report.html` — команда, которая запускается внутри контейнера: в данном случае скрипт базового сканирования ZAP, цель (`-t`) и имя HTML-отчёта (`-r`).
 
+## После завершения:
+```
+ls zap-data/reports
+```
+Получим:
+```
+example.html
+```
+Открыть:
+```
+firefox zap-data/reports/example.html
+```
 В результате:
 * `ZAP` запускается внутри контейнера;
 * берёт конфигурацию и вспомогательные файлы из `/zap/wrk` (то есть из `zap-data` на хосте);
@@ -63,6 +158,14 @@ docker run --rm -u zap -v $(pwd)/zap-data:/zap/wrk owasp/zap2docker-stable zap-b
 * после завершения контейнер удаляется, а папка zap-data с отчетами и конфигами остаётся у нас в проекте.
 
 Это и есть базовый шаблон: контейнер «временный», конфиги и результаты — в постоянной папке на хосте.
+
+## Использование JSON и XML отчетов
+```
+docker run --rm ...
+-t https://example.com \
+-r reports/report.html \
+-J reports/report.json
+```
 
 **ВИДЕО**
 
@@ -119,17 +222,36 @@ zap-data/
 
 Общий порядок действий:
 1. Запустить `ZAP` в desktop-режиме.
+```
+sudo apt install zaproxy
+...
+zaproxy
+```
 2. Подключить браузер к прокси ZAP и немного поработать с приложением, чтобы в дереве сайтов появились нужные URL.
-3.  В дереве сайтов (Sites) выбрать домен `правой кнопкой мыши → Include in Context → создать новый контекст` (например, myapp).
-4. В настройках контекста:
+3. В дереве сайтов (Sites) выбрать домен `правой кнопкой мыши → Include in Context → создать новый контекст` (например, myapp).
+
+4. В настройках контекста:
     * задать, какие пути входят в контекст (Patterns),
     * настроить аутентификацию (Authentication) — указать URL формы логина, параметры, успешный/неуспешный вход,
-    * добавить пользователей с логином и паролем (Users), если нужно сканировать как конкретный пользователь.
-5. Когда контекст настроен, сохранить его в файл:
+    ```
+    Login URL: https://example.com/login
+    POST параметры:
+    username={%username%}
+    password={%password%}
+    ```
+    * добавить пользователей с логином и паролем (Context - Users - Add), если нужно сканировать как конкретный пользователь.
+    ```
+    username=test
+    password=test123
+    ```
+
+5. Когда контекст настроен, сохранить его в файл:
 `Context → Export` (название пунктов может немного отличаться в разных версиях, но суть одна — экспорт контекста в `*.context` файл).
 
-6. Сохранённый `myapp.context` положить в папку `zap-data/context/` (или аналогичную, если структура другая).
-
+6. Сохранённый `myapp.context` положить в папку `zap-data/context/` (или аналогичную, если структура другая).
+```
+cp myapp.context ~/zap-security/zap-data/context/
+```
 После этого тот же файл можно использовать в контейнере.
 
 ## Как ZAP в контейнере узнаёт про эти файлы
@@ -144,12 +266,93 @@ zap-data/
 * контекст — `/zap/wrk/context/myapp.context`,
 * политика — `/zap/wrk/policies/myapp-scan-policy.xml`.
 
-Конкретные флаги зависят от версии скриптов, но принцип один:
-файлы, которые мы положили в `zap-data/...` на хосте, из контейнера видны в `/zap/wrk/...`.
+Конкретные флаги зависят от версии скриптов, но принцип один: файлы, которые мы положили в `zap-data/...` на хосте, из контейнера видны в `/zap/wrk/...`.
+
+Теперь ZAP знает:
+* какие URL проверять;
+* какие исключать;
+* каким пользователем входить.
+
+Команда:
+```
+docker run --rm \
+-u zap \
+-v $(pwd)/zap-data:/zap/wrk \
+owasp/zap2docker-stable \
+zap-full-scan.py \
+-t https://example.com \
+-n context/myapp.context \
+-r reports/fullscan.html
+```
+* `-n` - указывает файл контекста.
+
+## Использование собственной политики сканирования
+Запускаем ZAP:
+```
+zaproxy
+```
+Переходим: `Analyze - Scan Policy Manager`
+
+Создаем: `myapp-policy`
+
+Включить:
+* SQL Injection
+* XSS
+* CSRF
+* Path Traversal
+
+Выключить: `Denial of Service`
+
+Сохраняем: `myapp-policy.xml`
+
+Копируем:
+```
+cp myapp-policy.xml zap-data/policies/
+```
 
 ## Основные сценарии использования ZAP в контейнере
 Контейнерный запуск хорошо ложится на несколько типичных задач.
 
+### Запуск через API ZAP
+Иногда `CI/CD` удобнее работать через API. Запускаем `ZAP daemon`:
+```
+docker run \
+-d \
+--name zap \
+-p 8080:8080 \
+owasp/zap2docker-stable \
+zap.sh \
+-daemon \
+-host 0.0.0.0 \
+-port 8080
+```
+Проверяем:
+```
+curl http://localhost:8080
+```
+Получаем `ZAP API`!
+
+#### **Запуск `spider`**:
+```
+curl \
+"http://localhost:8080/JSON/spider/action/scan/?url=https://example.com"
+```
+Проверка статуса:
+```
+curl \
+"http://localhost:8080/JSON/spider/view/status/"
+```
+#### **Запуск `active scan`**:
+```
+curl \
+"http://localhost:8080/JSON/ascan/action/scan/?url=https://example.com"
+```
+Получение отчета:
+```
+curl \
+"http://localhost:8080/OTHER/core/other/htmlreport/" \
+-o report.html
+```
 ### CI/CD-пайплайны
 После сборки и развёртывания тестовой версии приложения в конвейере выполняется шаг:
 * поднять контейнер `ZAP` нужной версии;
@@ -160,6 +363,101 @@ zap-data/
 
 Дальше отчёт можно прикрепить к артефактам сборки или анализировать автоматически (например, по наличию критичных уязвимостей).
 
+#### **Пример GitLab CI**
+Файл:
+```
+.gitlab-ci.yml
+```
+В него добавляем:
+```
+security_scan:
+  stage: test
+  image:
+    name: owasp/zap2docker-stable
+    entrypoint: [""]
+  script:
+    - mkdir reports
+    - zap-baseline.py
+      -t https://test.example.com
+      -r reports/zap.html
+  artifacts:
+    when: always
+    paths:
+      - reports/
+```
+Теперь pipeline: `Build - Deploy test environment - ZAP Scan - Save report`.
+
+`.gitlab-ci.yml` — это инструкция для GitLab CI/CD, а не скрипт, который запускается у тебя на компьютере. Он говорит серверу GitLab:
+```
+"Когда кто-то сделает push в репозиторий — запусти вот эти команды в отдельной машине".
+```
+То есть схема такая: `git add - git commit - git push - (GitLab Repository) - (GitLab Runner
+(отдельная машина)) - читает .gitlab-ci.yml - запускает проверки`.
+
+Вот этот кусок:
+```
+security_scan:
+  stage: test
+```
+создает этап `pipeline`.
+
+Например полный pipeline:
+```
+stages:
+1. build
+2. deploy
+3. security_scan
+4. production
+```
+Вот здесь:
+```
+image:
+  name: owasp/zap2docker-stable
+```
+`GitLab Runner` создай временный Docker-контейнер из образа ZAP и выполни внутри него команды. `GitLab Runner` сам сделает:
+```
+docker pull owasp/zap2docker-stable
+docker run owasp/zap2docker-stable
+zap-baseline.py ...
+```
+***Semgrep работает аналогично***.
+
+Например:
+```
+.gitlab-ci.yml
+```
+может содержать:
+```
+semgrep:
+  image: semgrep/semgrep
+  script:
+    - semgrep scan --config auto .
+```
+#### **Интеграция с Docker Compose**
+Например:
+```
+project/
+├── docker-compose.yml
+└── zap-data/
+```
+docker-compose:
+```
+version: "3"
+services:
+  zap:
+    image:
+      owasp/zap2docker-stable
+    volumes:
+      - ./zap-data:/zap/wrk
+    command:
+      zap-baseline.py
+      -t http://web:8080
+      -r reports/report.html
+```
+Запуск:
+```
+docker compose up
+```
 Параллельное тестирование нескольких целей
 Если нужно проверить несколько приложений или несколько сред, можно запустить несколько контейнеров ZAP параллельно, каждому указав свой:
 * конфигурационный каталог;
@@ -167,6 +465,33 @@ zap-data/
 * целевой URL.
 
 Это удобно и в учебных задачах (разным группам — свои цели), и в реальных проектах с несколькими сервисами.
+
+#### **Проверка нескольких приложений параллельно**
+Например:
+* application1
+* application2
+* application3
+
+Запускаем:
+```
+docker run --rm \
+-v ./app1:/zap/wrk \
+owasp/zap2docker-stable \
+zap-baseline.py \
+-t https://app1.test
+```
+и одновременно:
+```
+docker run --rm \
+-v ./app2:/zap/wrk \
+owasp/zap2docker-stable \
+zap-baseline.py \
+-t https://app2.test
+```
+Каждый контейнер имеет:
+* свой context;
+* свои отчеты;
+* свои политики.
 
 В таком виде `ZAP` в контейнере — это отдельный этап сканирования, который:
 * запускается из стандартного Docker-образа;
