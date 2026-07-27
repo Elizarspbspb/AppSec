@@ -174,3 +174,189 @@ docker ps
 Такой подход позволяет использовать `ZAP` не только вручную, но и как регулярный автоматический «барьер», который проверяет новые сборки на базовые уязвимости.
 
 `ZAP` — это бесплатный и открытый инструмент от `OWASP` для тестирования безопасности веб-приложений, который по возможностям близок к Burp Suite, но делает упор на открытость и автоматизацию. В графическом режиме он удобно работает как прокси и сканер для ручного и полуавтоматического тестирования, а в daemon-/Docker-режимах превращается в компонент конвейера безопасной разработки, который можно дергать по API и встроить в регулярные проверки.
+
+## Устаовка и запуск ZAP
+### Скачать официальный архив
+Сначала установи Java (ZAP требует Java):
+```
+sudo apt update
+sudo apt install default-jre -y
+```
+Проверь:
+```
+java -version
+```
+Должно быть что-то вроде:
+```
+openjdk version "21.x"
+```
+Скачай `ZAP`:
+```
+cd ~/Downloads
+wget https://github.com/zaproxy/zaproxy/releases/latest/download/ZAP_2_16_1_Linux.tar.gz
+```
+(Если версия уже изменилась, можно взять актуальную с GitHub OWASP ZAP.)
+
+Распакуй:
+```
+tar -xzf ZAP_*.tar.gz
+```
+Перейди в папку:
+```
+cd ZAP_*
+```
+Запуск:
+```
+./zap.sh
+```
+### Потом проверь прокси в `ZAP`:  
+Tools
+  * → Options
+  * → Network
+  * → Local Servers/Proxies
+
+должно быть:
+```
+localhost: 127.0.0.1
+Port: 8080
+```
+
+### В FoxyProxy добавь новый профиль
+В Firefox:
+```
+FoxyProxy → Options → Add
+```
+Создай:
+```
+Title: OWASP ZAP
+Proxy Type: HTTP
+IP Address: 127.0.0.1
+Port: 8080
+```
+Сохрани.
+
+### ZAP завис на сертификате HTTPS
+При первом запуске `ZAP` должен создать свой CA-сертификат. Если HTTP работает, а HTTPS нет — надо установить сертификат `ZAP`.
+
+В `ZAP`:  
+Tools
+ * → Options
+ * → Network
+ * → Server Certificates
+ * → Save
+
+Сохрани сертификат.
+
+Потом `Firefox`:
+```
+Settings
+ → Privacy & Security
+ → Certificates
+ → View Certificates
+ → Import
+```
+Выбери сертификат `ZAP` и поставь галочку: ***Trust this CA to identify websites***.
+
+Работай!!!
+
+## Что такое Context в ZAP
+`Context` — это просто группа правил для выбранного сайта.
+
+В него можно добавить:
+* какие URL считать целью (scope);
+* какие URL исключать;
+* какие пользователи используются;
+* какие аутентификационные данные;
+* какие сканеры запускать.
+
+Например:
+```
+Context: sqlmap_lab
+
+Внутри:
+http://172.17.0.2:5000.*
+```
+Теперь `ZAP` понимает:
+
+"Вот этот сайт — моя лабораторная цель. Не трогай Google, GitHub и прочее."
+
+Но `Context` сам по себе НЕ собирает пакеты. Он не является прокси и не влияет на обычный просмотр сайта.
+
+## Как обычно работают в ZAP
+### Часть 1. Sites
+Слева открывают вкладку `Sites`.
+
+Там будет примерно так:
+```
+Sites
+ ├── https://github.com
+ ├── https://chat.openai.com
+ └── http://172.17.0.2:5000
+      ├── /
+      ├── /login
+      └── /search
+```
+Именно по дереву `Sites` обычно анализируют приложение. `History` используют скорее как общий лог.
+
+Задайте область тестирования (scope) - то почти наверняка:
+* Создать `Context`: ПКМ - Include in Context.
+* Добавить туда http://172.17.0.2:5000.*
+* Дальше запускать `Spider` или `Active Scan` только по этому `Context`.
+
+### Часть 2. Spider
+Теперь запускаем обход. В ZAP ПКМ по: http://172.17.0.2:5000. Дальше: Attack - Spider...
+
+или Contexts - ПКМ - Spider - Start Scan.
+
+ZAP начнёт искать:
+* /
+* login
+* logout
+* admin
+* search
+
+### Часть 3. AJAX Spider
+Он нужен только если сайт сильно использует `JavaScript`. Запускается: Tools - AJAX Spider.
+
+### Часть 4. Active Scan
+ПКМ по сайту - Attack - Active Scan...
+
+И ZAP спросит: Scan policy
+
+Оставляешь: Default Policy
+
+Запускаешь.
+
+Он будет искать:
+* SQL Injection
+* XSS
+* Path Traversal
+* CSRF
+* Security Headers
+* и т.д.
+
+### Часть 5. Alerts
+В `ZAP` открой `Alerts` или снизу - Alerts. Там будут реальные находки:
+```
+High
+  SQL Injection
+
+Medium
+  Missing Anti-CSRF Tokens
+
+Low
+  X-Content-Type-Options Missing
+```
+Именно это является результатом `Active Scan`.
+
+### Часть 6. Сохранить отчёт ZAP в HTML
+В ZAP 2.17.0. Меню: `Report - Generate Report...`
+
+Дальше:
+* Report type: HTML
+Report title: SQLMap Lab - ZAP Security Scan Report
+Выбираешь место сохранения: ~/Documents/zap_report.html
+
+Нажимаешь `Generate`.
+
+После этого получишь HTML-файл, который можно открыть в браузере.
