@@ -24,3 +24,29 @@ a and exists ( select "java.lang.Thread.sleep"(15000) from INFORMATION_SCHEMA.SY
 Введенные значения попали в SQL-запрос и где-то возможно SQL инъекция. 
 Дальше в Alerts видны потенциальные уязвимости. 
 
+Сохранены отчёты ZAP в формате HTML.
+
+Расстановка рисков по приоритету - 
+1. Content Security Policy (CSP) Header Not Set (Medium) - нет правил загрузки скриптов браузером.
+2. Missing Anti-clickjacking Header (Medium) - нет параметра x-frame-options и позволяет встраивать сайт в iframe на других страницах.
+3. Server Leaks Version Information via “Server” HTTP Response Header Field (Low) - утечка версии сервера
+4. X-Content-Type-Options Header Missing (Low) - нет заголовка X-Content-Type-Options от снифинга. 
+5. User Controllable HTML Element Attribute (Potential XSS) (Informational) - пользователь контролирует html аттрибут. 
+
+Часть 3.
+Повторим через Burp. 
+1. При тестировании Content Security Policy (CSP) Header Not Set (Medium) в области Response не обнаружен заголовок Content-Security-Policy - Confirmed (Подтверждение)
+Content-Security-Policy задаёт правила для браузера: какие источники контента разрешены, а какие — нет.
+2. Missing Anti-clickjacking Header (Medium) -  в области Response не обнаружен заголовок X-Frame-Options - Confirmed (Подтверждение)
+X-Frame-Options — это HTTP-заголовок ответа, который сообщает браузеру, разрешено ли отображать страницу в HTML-элементах
+3. Server Leaks Version Information (Low) - в области Response  приложение возвращает версию сервера и ЯП - Server: Werkzeug/3.1.5 Python/3.11.14  - Confirmed (Подтверждение)
+4. X-Content-Type-Options Header Missing (Low) - в области Response не обнаружен заголовок X-Content-Type-Options - Confirmed (Подтверждение)
+5. User Controllable HTML Element Attribute (Potential XSS) - При отправке <img src=x onerror=alert(1)> или javascript:alert(1) или " onmouseover=alert(1) ничего не выводится. А если - <script>fetch('/change-email?email=hacker@mail.com')</script> то ответ Ошибка выполнения запроса: near "?": syntax error. Веротянее тут False Positive (Ошибка) но для XSS, а не для SQL-инъекции. 
+Ввод admin' выдает - Ошибка выполнения запроса: near "'%'": syntax error, значит ввод ' UNION SELECT NULL,NULL,NULL-- вывел всю базу данных пользователей. 
+
+Часть 4. 
+Сформирован HAR файл для последнего случая с SQL-инъекцией.
+Сделан скриншот
+
+Часть 5. 
+

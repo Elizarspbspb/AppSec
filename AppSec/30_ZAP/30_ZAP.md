@@ -360,3 +360,13 @@ Report title: SQLMap Lab - ZAP Security Scan Report
 Нажимаешь `Generate`.
 
 После этого получишь HTML-файл, который можно открыть в браузере.
+
+### Как сделать HAR в ZAP
+`HAR` (HTTP Archive) — это файл, в котором сохраняются HTTP-запрос и HTTP-ответ.
+
+Есть несколько способов.
+* Найди нужную уязвимость в Alerts.
+* Дважды щёлкни по ней.
+* ZAP покажет Request и Response.
+* Найди этот запрос в History.
+* ПКМ по запросу → `Export` или `Save Message` или `Export HAR`.
