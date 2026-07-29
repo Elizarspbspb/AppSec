@@ -366,7 +366,7 @@ Report title: SQLMap Lab - ZAP Security Scan Report
 
 Есть несколько способов.
 * Найди нужную уязвимость в Alerts.
-* Дважды щёлкни по ней.
-* ZAP покажет Request и Response.
+* ПКМ или Дважды щёлкни по ней.
+* Save as HAR...
 * Найди этот запрос в History.
 * ПКМ по запросу → `Export` или `Save Message` или `Export HAR`.
