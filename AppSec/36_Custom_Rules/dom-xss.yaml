@@ -1,0 +1,31 @@
+id: dom-xss-innerhtml
+
+info:
+  name: DOM XSS
+  author: appsec
+  severity: high
+  description: >
+    DOM XSS-уязвимость с передачей значения URL параметра в JavaScript-функцию innerHTML без обработки.
+http:
+  - method: GET
+    path: 
+    - "{{BaseURL}}/?q=<img+src%3Dx+onerror%3Dalert(1)>"
+    matchers-condition: and
+    matchers:
+      - type: regex
+        part: body
+        regex:
+          - "document\\.getElementById"
+      - type: regex
+        part: body
+        regex:
+          - "innerHTML\\s*=.*\\+\\s*q"
+      - type: status
+        status:
+          - 200
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "(document\\.getElementById\\([^;]+innerHTML[^;]+)"
+        group: 1
