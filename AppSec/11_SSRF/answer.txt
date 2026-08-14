@@ -2,4 +2,6 @@ http://localhost:8000/admin
 
 http://ssrf-server2:5000/admin
 
+http://ssrf-server2:5003/admin
+
 FLAG{ssrf_success_with_internal_secret}

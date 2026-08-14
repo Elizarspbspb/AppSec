@@ -1,0 +1,1174 @@
+--- Результат для http://ssrf-server2:5000/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5000): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5000): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5000/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5001/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5001): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5001): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5001/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5002/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5002): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5002): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5002/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5003/admin ---
+<html><head></head><body><div class="container">
+                <div class="card error">
+                    <h2>❌ Error: Not an Image</h2>
+                    <div class="response-box">
+                        <p><strong>URL:</strong> http://ssrf-server2:5003/admin</p>
+                        <p><strong>Content-Type:</strong> text/html; charset=utf-8</p>
+                        <p><strong>Response Preview:</strong></p>
+                        <div style="border: 1px solid #ccc; padding: 10px; margin-top: 10px; background: white;">
+                            
+    <h1>Admin Panel - Server 2</h1>
+    <p>Welcome, authenticated internal service!</p>
+    <div style="background: #f0f0f0; padding: 20px; border: 2px solid red;">
+        <h2>SECRET FLAG:</h2>
+        <h3>FLAG{ssrf_success_with_internal_secret}</h3>
+    </div>
+    <p><strong>Authentication:</strong> Valid internal secret header provided</p>
+    <a href="/">Back to main</a>
+    
+                        </div>
+                    </div>
+                    <a href="/" class="btn">← Back to Main</a>
+                </div>
+            </div>
+            </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5004/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5004): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5004): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5004/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5005/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5005): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5005): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5005/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5006/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5006): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5006): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5006/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5007/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5007): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5007): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5007/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5008/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5008): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5008): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5008/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5009/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5009): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5009): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5009/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5010/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5010): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5010): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5010/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5011/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5011): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5011): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5011/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5012/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5012): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5012): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5012/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5013/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5013): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5013): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5013/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5014/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5014): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5014): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5014/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5015/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5015): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5015): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5015/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5016/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5016): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5016): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5016/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5017/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5017): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5017): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5017/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5018/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5018): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5018): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5018/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5019/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5019): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5019): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5019/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5020/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5020): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5020): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5020/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5021/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5021): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5021): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5021/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5022/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5022): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5022): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5022/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5023/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5023): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5023): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5023/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5024/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5024): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5024): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5024/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5025/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5025): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5025): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5025/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5026/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5026): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5026): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5026/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5027/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5027): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5027): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5027/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5028/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5028): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5028): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5028/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5029/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5029): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5029): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5029/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5030/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5030): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5030): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5030/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5031/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5031): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5031): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5031/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5032/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5032): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5032): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5032/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5033/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5033): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5033): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5033/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5034/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5034): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5034): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5034/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5035/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5035): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5035): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5035/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5036/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5036): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5036): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5036/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5037/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5037): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5037): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5037/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5038/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5038): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5038): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5038/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5039/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5039): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5039): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5039/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5040/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5040): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5040): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5040/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5041/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5041): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5041): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5041/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5042/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5042): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5042): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5042/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5043/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5043): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5043): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5043/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5044/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5044): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5044): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5044/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5045/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5045): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5045): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5045/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5046/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5046): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5046): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5046/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5047/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5047): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5047): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5047/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5048/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5048): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5048): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5048/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5049/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5049): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5049): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5049/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5050/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5050): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5050): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5050/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5051/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5051): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5051): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5051/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5052/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5052): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5052): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5052/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5053/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5053): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5053): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5053/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5054/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5054): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5054): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5054/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5055/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5055): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5055): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5055/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5056/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5056): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5056): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5056/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5057/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5057): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5057): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5057/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5058/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5058): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5058): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5058/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5059/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5059): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5059): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5059/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5060/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5060): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5060): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5060/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5061/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5061): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5061): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5061/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5062/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5062): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5062): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5062/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5063/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5063): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5063): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5063/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5064/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5064): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5064): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5064/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5065/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5065): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5065): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5065/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5066/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5066): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5066): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5066/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5067/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5067): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5067): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5067/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5068/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5068): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5068): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5068/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5069/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5069): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5069): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5069/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5070/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5070): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5070): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5070/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5071/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5071): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5071): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5071/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5072/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5072): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5072): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5072/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5073/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5073): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5073): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5073/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5074/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5074): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5074): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5074/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5075/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5075): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5075): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5075/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5076/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5076): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5076): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5076/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5077/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5077): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5077): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5077/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5078/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5078): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5078): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5078/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5079/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5079): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5079): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5079/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5080/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5080): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5080): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5080/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5081/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5081): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5081): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5081/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
+
+--- Результат для http://ssrf-server2:5082/admin ---
+<html><head></head><body><div class="container">
+            <div class="card error">
+                <h2>❌ Error Fetching URL</h2>
+                <div class="response-box">
+                    <p><strong>Error:</strong> HTTPConnectionPool(host='ssrf-server2', port=5082): Max retries exceeded with url: /admin (Caused by NewConnectionError("HTTPConnection(host='ssrf-server2', port=5082): Failed to establish a new connection: [Errno 111] Connection refused"))</p>
+                    <p><strong>URL:</strong> http://ssrf-server2:5082/admin</p>
+                </div>
+                <a href="/" class="btn">← Back to Main</a>
+            </div>
+        </div>
+        </body></html>
+--------------------------------------------------
