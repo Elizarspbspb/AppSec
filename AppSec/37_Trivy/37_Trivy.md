@@ -8,6 +8,20 @@
 * одинаково запускается и на основной машине, и интегрируется в процесс сборки;
 * покрывает и зависимости, и образы, и конфигурацию.
 
+## Установка Linux (Debian / Ubuntu)
+Add repo: 
+```
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+```
+Set source: 
+```
+echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+```
+Install: 
+```
+sudo apt-get update && sudo apt-get install trivy
+```
+
 **Пример:**
 
 Обычно знакомство начинают с самого простого — скана публичного образа:
@@ -97,6 +111,11 @@ trivy image --format cyclonedx --output sbom-alpine.json alpine:3.15
 * передавать другим инструментам анализа;
 * использовать для отслеживания, какие библиотеки реально входят в ваши образы.
 
+Это толко сбор зависимостей. Сам анализ:
+```
+trivy sbom sbom-alpine.json
+```
+
 **ВИДЕО**
 
 ## Чем Trivy отличается от других сканеров
@@ -183,9 +202,18 @@ trivy k8s cluster
 trivy config ./terraform
 ```
 ### Генерация SBOM для образа:
+На самом деле Trivy сначала генерирует SBOM файлы зависимостей, а потом проверяет их. 
+* cyclonedx - какой SBOM файл нужен, именно про уязвимости;
+* sbom.json - файл с компонентами и его уязвимости
+* alpine:3.15 - сам образ.
 ```
 trivy image --format cyclonedx --output sbom.json alpine:3.15
 ```
+Это толко сбор зависимостей. Сам анализ:
+```
+trivy sbom sbom.json
+```
+
 На практике вы будете комбинировать эти команды с нужными опциями: фильтрация по уровню серьёзности (`--severity`), выбор вида проверок (`--security-checks`), выбор формата (`--format/-f`) и т.д.
 
 ## Форматы вывода отчётов Trivy
