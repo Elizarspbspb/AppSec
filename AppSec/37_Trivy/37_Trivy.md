@@ -9,9 +9,21 @@
 * покрывает и зависимости, и образы, и конфигурацию.
 
 ## Установка Linux (Debian / Ubuntu)
+Компоненты:
+```
+sudo apt-get install wget apt-transport-https gnupg
+```
 Add repo: 
 ```
 wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+
+ИЛИ
+
+wget -qO - https://get.trivy.dev/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+
+ИЛИ
+
+wget --secure-protocol=TLSv1_2 -O - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
 ```
 Set source: 
 ```
