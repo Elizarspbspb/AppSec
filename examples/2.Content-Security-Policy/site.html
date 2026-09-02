@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="output"></div>
+
+<script>
+    const value = new URLSearchParams(location.search).get("q");
+    document.getElementById("output").innerHTML = value;
+</script>
+
+</body>
+</html>
