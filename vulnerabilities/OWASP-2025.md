@@ -1,6 +1,80 @@
 https://portswigger.net/web-security/api-testing/top-10-api-vulnerabilities
 
-OWASP выпустил топ-10 самых актуальных категорий рисков и веб-атак за последние 5 лет:
+## 1. HTML / браузерный интерфейс
+Здесь проблема возникает на уровне страницы, DOM, отображения или взаимодействия пользователя с ней.
+* XSS
+* Reflected XSS
+* Stored XSS
+* DOM-based XSS
+* Clickjacking
+* Web Cache Poisoning
+* Web Cache Deception
+* HTTP Parameter Pollution — частично относится сюда, но зависит от обработки параметров сервером
+* CORS — браузерная политика, но конфигурация находится на сервере
+* CSRF — действие выполняется браузером пользователя, хотя причина обычно на серверной стороне
+* DOM-based vulnerabilities — отдельный большой блок, если изучать глубже
+
+## 2. JavaScript / клиентская логика
+Здесь основная проблема связана именно с выполнением JavaScript и обработкой данных в браузере.
+* DOM XSS
+* DOM-based open redirect
+* DOM-based cookie manipulation
+* Prototype pollution
+* JavaScript-related vulnerabilities
+* различные уязвимости, связанные с небезопасной обработкой данных в DOM
+
+## 3. Серверная часть / HTTP-обработка
+Это самая большая группа. Здесь сервер получает данные от пользователя и неправильно их обрабатывает.
+
+Инъекции:
+* SQL injection
+* NoSQL injection
+* OS command injection
+* LDAP injection
+* XML injection
+* SSTI
+* XPath injection
+
+Аутентификация и доступ:
+* Authentication vulnerabilities
+* Access control vulnerabilities
+* IDOR
+* Privilege escalation
+* Session vulnerabilities
+
+Работа с запросами:
+* HTTP request smuggling
+* HTTP Host header attacks
+* Server-side request forgery (SSRF)
+* Server-side parameter pollution
+* HTTP parameter pollution
+
+Файлы:
+* Path traversal
+* File upload vulnerabilities
+* XXE
+
+Другие:
+* Business logic vulnerabilities
+* Race conditions
+* API vulnerabilities
+* Information disclosure
+
+## 4. Архитектура / инфраструктура
+Это уже взаимодействие компонентов приложения:
+* Web cache poisoning
+* Web cache deception
+* HTTP request smuggling
+* SSRF
+* Insecure deserialization
+* Server-side prototype pollution
+* OAuth vulnerabilities
+* JWT vulnerabilities
+* API testing
+* GraphQL vulnerabilities
+* WebSockets vulnerabilities
+
+`OWASP` выпустил топ-10 самых актуальных категорий рисков и веб-атак за последние 5 лет:
 
     Broken access control (BAC) — нарушение контроля доступа.
 
