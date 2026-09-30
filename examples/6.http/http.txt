@@ -1,0 +1,33 @@
+Первый пример - https://www.normal-website.com:8443/admin/login?user=123#profile
+1. Протокол - https://
+Это схема (scheme) — здесь HTTPS.
+
+2. Домен / host
+host — имя узла, к которому обращается браузер.
+Здесь: www.normal-website.com
+
+3. Порт: 8443
+Если порт не указан, используются стандартные порты:
+http  → 80
+https → 443
+
+4. Путь / path 
+path — какой ресурс запрашивается: /admin/login
+
+5. Query-параметры
+После ? идут параметры запроса: ?user=123
+
+6. Fragment
+После # находится fragment: #profile
+fragment обычно не отправляется серверу в HTTP-запросе. Он обрабатывается браузером.
+
+========
+
+Второй пример - https://www.normal-website.com.evil.net
+Настоящий домен здесь: evil.net
+То есть владелец evil.net создает поддомен: normal-website.com.evil.net
+
+- net — доменная зона;
+- evil.net — домен;
+- normal-website.com.evil.net — поддомен evil.net;
+normal-website.com это просто часть имени поддомена.
