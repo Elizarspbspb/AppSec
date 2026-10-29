@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Мета-тег для запрета управления вашим сайтом внутри чужих iframe (Защита от Clickjacking) -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <!-- Настройка Content Security Policy (CSP) -->
+    <!-- Разрешаем скрипты и стили только с собственного домена ('self'), полностью запрещаем инлайн-код -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'self';">
+
+    <title>Безопасная Платформа</title>
+    
+    <!-- Все скрипты подключаются только как внешние изолированные файлы -->
+    <script src="/js/secure-app.js" defer></script>
+    <link rel="stylesheet" href="/css/styles.css">
+	
+	<!-- Атрибут Subresource Integrity (SRF) для внешних скриптов -->
+	<!-- Использовать атрибут integrity, который содержит хэш-сумму (SHA) правильного файла -->
+	<script src="https://cdnjs.../jquery.js" integrity="sha384-oqVuAfXR..." crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Личный кабинет ИТ-Платформы</h1>
+    </header>
+
+    <main>
+        <!-- Защищенная форма авторизации -->
+        <!-- Метод строго POST. Для защиты от CSRF внутри формы обязательно должен быть скрытый токен -->
+        <form action="/api/v1/login" method="POST">
+            <!-- CSRF-токен, который генерируется сервером для проверки легитимности запроса -->
+            <input type="hidden" name="csrf_token" value="d93f8ha910fasjkn12390fasf">
+
+			<!-- required - проверка пустой формы -->
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Пароль:</label>
+            <!-- Атрибут autocomplete="current-password" безопасен, но для пин-кодов лучше ставить "off" -->
+            <input type="password" id="password" name="password" autocomplete="current-password" required>
+
+            <button type="submit">Войти</button>
+        </form>
+
+        <!-- Безопасная внешняя ссылка -->
+        <!-- target="_blank" ОБЯЗАТЕЛЬНО требует rel="noopener noreferrer", иначе чужой сайт украдет сессию -->
+        <section>
+            <p>Узнать больше о безопасности в нашем филиале: 
+			<!-- rel="noopener noreferrer" атрибут просто обрезает связь между вкладками. Новая вкладка открывается, но она физически теряет доступ к вашей оригинальной странице и не может её подменить. -->
+                <a href="https://external-partner-site.com" target="_blank" rel="noopener noreferrer">Партнерский сайт</a>
+            </p>
+        </section>
+
+        <!-- Вывод данных пользователя (Защита от XSS) -->
+        <section>
+            <h2>Добро пожаловать обратно!</h2>
+            <!-- Если данные пользователя (например, имя) выводятся на экран, -->
+            <!-- фронтенд должен обязательно экранировать (escape) спецсимволы, -->
+            <!-- превращая < в &lt;, а > в &gt;, чтобы браузер не принял текст за тег скрипта -->
+            <div id="user-profile-name">Иван &lt;Защищенный&gt;</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Безопасная логистическая биржа</p>
+    </footer>
+
+</body>
+</html>
