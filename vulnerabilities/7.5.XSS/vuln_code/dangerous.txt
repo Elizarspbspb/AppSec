@@ -1,0 +1,7 @@
+eval()
+eval
+setTimeout(string)
+setTimeout
+document.write()
+document.write
+innerHTML
