@@ -25,12 +25,8 @@ def search():
     <p>No results found.</p>
     <a href="/">Back</a>
     """
+    
+    html_vuln = f""" {q}  """
     # Экранирование - самый безопасный. Шаблонизатор Jinja
     # HTML-кодирование
-    html_vuln = f"""
-    <h1>Search results</h1>
-    <p>You searched for: {q}</p>
-    <p>No results found.</p>
-    <a href="/">Back</a>
-    """
-    return html
+    return html_vuln
