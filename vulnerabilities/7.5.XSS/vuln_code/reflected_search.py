@@ -26,7 +26,7 @@ def search():
     <a href="/">Back</a>
     """
     
-    html_vuln = f""" {q}  """
+    html_vuln = f"""User {id} logged in"""
     # Экранирование - самый безопасный. Шаблонизатор Jinja
     # HTML-кодирование
     return html_vuln

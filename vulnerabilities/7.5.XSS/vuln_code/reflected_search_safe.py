@@ -23,7 +23,7 @@ def search():
     
     # Далее 2 варианта
     # 1 - html шаблон в коде программы
-    html = f"""
+    html = """
     <h1>Search results</h1>
     <p>You searched for: {{q}}</p>
     <p>No results found.</p>
@@ -32,7 +32,7 @@ def search():
     return render_template_string(html, query=q)
     
     # 2 - html шаблон в отдельном файле search.html
-    return render_template("search.html", query=q)
+    #return render_template("search.html", query=q)
     
 # search.html
 '''

@@ -1,5 +1,6 @@
 # semgrep scan --config=rules/xss.yaml vuln_code/*
 # «Переменные среды...» - нажмите кнопку «Создать...». Введите - Имя переменной: PYTHONUTF8; Значение переменной: 1
+# semgrep scan --config=C:/Users/Admin/Desktop/rules/ vuln_code/reflected_search.py
 rules:
   - id: 1-reflected_search
     languages: [python]
@@ -7,10 +8,6 @@ rules:
     message: "Найдена небезопасная f-строка. Используйте синтаксис Jinja {{ ... }} вместо { ... }"
     patterns:
       - pattern: f"...{ $VAR }..."
-      #- pattern-regex: /^"\w+([.-]?\w+)({q})"$/gm
-      #- pattern-regex: '<s*[^>]*\shref=["''][^"'']*\{[^}]+\}[^"'']*["''][^>]*>'
-      #- pattern-regex: /^"."$/gm
-      #- pattern-regex: rf"""(?s)f["']{3}.*?<[^>]+>.*?\{.+?\}.*?["']{3}"""
-      - pattern-regex: <[^>]+>
-      #- pattern: "...<$A>..."
-    fix: $X = "...{{ $VAR }}..."
+      - pattern: $R = f"...{ $VAR }..."
+      - pattern-regex: ".*<[a-zA-Z]+.*>.*{.*}.*"  # (.*) — любые символы, ([a-zA-Z]+) - 1 и более букв
+    fix: render_template_string($R, get_param=$VAR)
