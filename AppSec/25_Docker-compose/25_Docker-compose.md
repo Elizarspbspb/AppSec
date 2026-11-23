@@ -111,6 +111,24 @@ networks:
 В результате `docker-compose` становится удобным инструментом именно для специалиста по безопасной разработке: он позволяет задавать сложные стенды, держать их под контролем версий, быстро поднимать и так же быстро уничтожать, при этом явно фиксируя все связи, данные и параметры, которые могут влиять на безопасность тестируемых приложений.
 
 ## Основные команды для перезапуска (в командной строке - docker-compose)
+### 0. Добавьте правильный репозиторий Docker (через base64, ссылка не обрежется):
+```
+sudo install -m 0755 -d /etc/apt/keyrings
+```
+```
+echo "aHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3VidW50dQ==" | base64 -d | xargs -I {} sudo curl -fsSL {}/gpg -o /etc/apt/keyrings/docker.asc
+```
+```
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+```
+```
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] $(echo aHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3VidW50dQ== | base64 -d) jammy stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+Установите Docker Compose:
+```
+sudo apt-get update && sudo apt-get install -y docker-compose-plugin
+```
+
 ### 1. Простой перезапуск существующих контейнеров (без пересборки):
 ```bash
 docker-compose up -d
